@@ -16,9 +16,9 @@
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
-        .state('home', {
-          url: '/home',
-          templateUrl: 'partial.home.html'
+        .state('contact', {
+          url: '/contact',
+          templateUrl: 'partial.contact.html'
         })
 
         .state('about', {

@@ -7,7 +7,7 @@ body {
   padding: 0 10%;
   border-left: 1em solid #30f7ba;
   height: 100vh;
-  background-image: url("_images/dotbackground.png");
+  // background-image: url("../_images/dotbackground.png");
 }
 
 h1, h2, p {
@@ -69,12 +69,12 @@ h2 {
   width: 50%;
 }
 
-.first-set {
-
+h1 span {
+  display: block;
 }
 
-.second-set {
-
+h2 a {
+  margin-right: 1em;
 }
 
 $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #992aec #edd72d;
