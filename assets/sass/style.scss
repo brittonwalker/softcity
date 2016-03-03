@@ -1,0 +1,89 @@
+$textColor: #56217c;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0 10%;
+  border-left: 1em solid #30f7ba;
+  height: 100vh;
+  background-image: url("_images/dotbackground.png");
+}
+
+h1, h2, p {
+  color: $textColor;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+li {
+  margin-right: 3rem;
+  text-transform: uppercase;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+h1 {
+  line-height: 1.5em;
+  text-align: left;
+  font-size: 2.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.circle-container1 {
+  display: flex;
+  // align-items: center;
+}
+
+.circle-container2 {
+  display: flex;
+  margin-top: 1em;
+  // align-items: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.riso-container {
+  width: 50%;
+}
+
+.first-set {
+
+}
+
+.second-set {
+
+}
+
+$colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #992aec #edd72d;
+@each $current-color in $colors-list {
+  $i: index($colors-list, $current-color);
+  .circle-#{$i} {
+    @extend .circle;
+    background-color: $current-color;
+    // display: inline;
+    margin-right: 1.5em;
+  }
+}
