@@ -1,10 +1,26 @@
 $textColor: #56217c;
 
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url(../avenir/AvenirLTStd-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "Fortescue-Bold";
+  src: url(../fortescue/Fortescue-Bold.otf) format('opentype');
+}
+
+.menu {
+  font-family: 'AvenirLTStd-Black';
+  color: $textColor;
+}
+
 * {
   box-sizing: border-box;
   // padding: 0;
   // margin: 0;
 }
+
 body {
   padding: 0 10%;
   border-left: 1em solid #30f7ba;
@@ -15,7 +31,27 @@ body {
 
 h1, h2, p {
   color: $textColor;
+  font-family: 'Fortescue-Bold'
 }
+
+h2 {
+  font-family: 'AvenirLTStd-Black';
+}
+
+p {
+  line-height: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.email {
+  border-bottom: 3px solid $textColor;
+  padding-bottom: 3px;
+  text-transform: none;
+}
+
 
 nav {
   display: flex;
@@ -50,6 +86,33 @@ h1 {
 
 h2 {
   text-transform: uppercase;
+  font-family: 'Fortescue-Bold'
+}
+
+.color-container {
+  h2 {
+    font-family: 'AvenirLTStd-Black';
+    font-size: 1em;
+  }
+}
+
+.riso-container {
+  h2 {
+    font-family: 'AvenirLTStd-Black';
+    font-size: 1em;
+  }
+}
+
+.social-media-container {
+  margin-top: 200px;
+}
+
+.contact-container {
+  margin-top: 3em;
+}
+
+.about-main-container {
+  margin-top: 3em;
 }
 
 .circle-container1 {
