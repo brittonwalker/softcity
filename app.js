@@ -3,7 +3,8 @@
 (function() {
   angular
   .module('softCity', [
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
   ])
   .config([
     "$stateProvider",
