@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
   <script src="/js/app.js"></script>
+  <script src="/js/controllers/index.controller.js"></script>
 </head>
 
 <body ng-app="softCity">
@@ -18,10 +19,10 @@
       <a ui-sref="home"><img src="img/softcitylogo.png" alt="Soft City Logo"></a>
     </div>
     <ul>
-      <li class="menu"><a ui-sref="projects" class="links">Projects</a></li>
-      <li class="menu"><a ui-sref="about" class="links">About</a></li>
-      <li class="menu"><a ui-sref="contact" class="links">Contact</a></li>
-      <li class="menu"><a ui-sref="store" class="links">Store</a></li>
+      <li class="menu"><a ui-sref="projects" class="links" ui-sref-active="active">Projects</a></li>
+      <li class="menu"><a ui-sref="about" class="links" ui-sref-active="active">About</a></li>
+      <li class="menu"><a ui-sref="contact" class="links" ui-sref-active="active">Contact</a></li>
+      <li class="menu"><a ui-sref="store" class="links" ui-sref-active="active">Store</a></li>
     </ul>
   </nav>
 

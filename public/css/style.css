@@ -160,4 +160,8 @@ h2 a {
   background-color: #edd72d;
   margin-right: 1.5em; }
 
+.active {
+  border-bottom: 3px solid #30f7ba;
+  padding-bottom: 3px; }
+
 /*# sourceMappingURL=style.css.map */

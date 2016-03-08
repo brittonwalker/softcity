@@ -30,6 +30,13 @@
           url: '/about',
           templateUrl: '../views/partial-about.html'
         })
+
+        .state('projects', {
+          url: '/projects',
+          templateUrl: '../views/projects.index.html',
+          controller: 'indexController',
+          controllerAs: 'index'
+        })
   };
 
 })()
