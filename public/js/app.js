@@ -14,17 +14,21 @@
 
   function RouterFunction($stateProvider, $urlRouterProvider){
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
+        .state('intro', {
+          url: '',
+          templateUrl: '../views/partial.intro.html'
+        })
         .state('contact', {
           url: '/contact',
-          templateUrl: 'partial.contact.html'
+          templateUrl: '../views/partial.contact.html'
         })
 
         .state('about', {
           url: '/about',
-          templateUrl: 'partial-about.html'
+          templateUrl: '../views/partial-about.html'
         })
   };
 
