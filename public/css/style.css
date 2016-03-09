@@ -164,4 +164,26 @@ h2 a {
   border-bottom: 3px solid #30f7ba;
   padding-bottom: 3px; }
 
+.author {
+  font-family: 'AvenirLTStd-Black';
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0; }
+
+div.indexview p {
+  margin: 0;
+  padding: 0;
+  line-height: normal; }
+
+div.indexview img {
+  margin-bottom: 20px; }
+
+.indexcontainer {
+  margin-top: 3em; }
+
+.indexview {
+  margin-right: 6em;
+  margin-bottom: 5em;
+  display: inline-block; }
+
 /*# sourceMappingURL=style.css.map */

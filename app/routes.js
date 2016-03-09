@@ -12,12 +12,15 @@ module.exports = function(app) {
   });
 
   app.post('/api/projects', function(req, res) {
+    var array = [];
+    var images = {url: req.body.img };
+    array.push(images);
     Project.create({
       title: req.body.title,
       about: req.body.about,
       author: req.body.author,
       specs: req.body.specs,
-      imgUrl: req.body.imgUrl
+      img: array
     }, function(err, project) {
       if (err)
         res.send(err);

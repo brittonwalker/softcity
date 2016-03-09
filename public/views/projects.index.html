@@ -1,7 +1,7 @@
-<p>{{ 5 + 5 }}</p>
-<ul ng-repeat="item in index.mydata">
-  <li>{{ item.title }}</li>
-  <li>{{ item.author }}</li>
-  <li>{{ item.imgUrl }}</li>
-  <li>{{ item.about }}</li>
-</ul>
+<div class="indexcontainer">
+  <div ng-repeat="item in index.mydata" class="indexview">
+    <img src='{{ item.img[0].url }}' height="300">
+    <p><a data-ui-sref="projectShow({id: item._id})">{{ item.title }}</a></p>
+    <p class="author">By {{ item.author }}</p>
+  </div>
+</div>

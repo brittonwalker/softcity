@@ -21,6 +21,7 @@
           url: '',
           templateUrl: '../views/partial.intro.html'
         })
+
         .state('contact', {
           url: '/contact',
           templateUrl: '../views/partial.contact.html'
@@ -36,6 +37,13 @@
           templateUrl: '../views/projects.index.html',
           controller: 'indexController',
           controllerAs: 'index'
+        })
+
+        .state('projectShow', {
+          url: '/projects/:id',
+          templateUrl: '../views/projects.show.html',
+          controller: 'showController',
+          controllerAs: 'show'
         })
   };
 
