@@ -19,7 +19,8 @@
     $stateProvider
         .state('intro', {
           url: '',
-          templateUrl: '../views/partial.intro.html'
+          templateUrl: '../views/partial.intro.html',
+          controller: 'introController'
         })
 
         .state('contact', {

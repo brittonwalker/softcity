@@ -6,7 +6,7 @@ var ProjectSchema   = new Schema({
     about: String,
     author: String,
     specs: String,
-    img: [{ url: String }]
+    img: []
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

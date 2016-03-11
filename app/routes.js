@@ -13,7 +13,7 @@ module.exports = function(app) {
 
   app.post('/api/projects', function(req, res) {
     var array = [];
-    var images = {url: req.body.img };
+    var images = req.body.img;
     array.push(images);
     Project.create({
       title: req.body.title,
@@ -51,7 +51,8 @@ module.exports = function(app) {
       project.about = req.body.about;
       project.author = req.body.author;
       project.specs = req.body.specs;
-      project.imgUrl = req.body.imgUrl;
+      var path = req.body.img;
+      project.img.push(path);
 
       project.save(function(err) {
         if (err)
@@ -59,6 +60,16 @@ module.exports = function(app) {
 
         res.json({ message: 'Project updated!'})
       });
+    });
+  });
+
+  app.get('/api/projects/:project_id/imgs', function(req, res) {
+    Project.findById(req.params.project_id, function(err, project) {
+      // project.img.splice(0, 2);
+      if (err)
+        res.send(err);
+
+      res.json(project.img);
     });
   });
 

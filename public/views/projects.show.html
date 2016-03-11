@@ -1,7 +1,12 @@
 <div class="indexcontainer">
+  <div class="description">
   <h2>{{ show.mydata.title }}</h2>
-  <h2>{{ show.mydata.about }}</h2>
-  <h2>{{ show.mydata.author }}</h2>
-  <h2>{{ show.mydata.specs }}</h2>
+  <p>{{ show.mydata.about }}</p>
+  <p>{{ show.mydata.author }}</p>
+  <p>{{ show.mydata.specs }}</p>
+  </div>
+  <div ng-repeat="item in show.mydata.img" class="image-container">
+    <img src="{{ item }}" alt="">
+  </div>
 
 </div>
