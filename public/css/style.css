@@ -126,6 +126,11 @@ h2 a {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 [ui-view].ng-enter {
   animation: fadeIn .5s; }
 
@@ -224,7 +229,6 @@ div.indexview img {
 .splash {
   width: 100vw;
   height: 100vh;
-  background-color: white;
   z-index: 100;
   position: absolute;
   top: 0;

@@ -18,6 +18,12 @@
 
     $stateProvider
         .state('intro', {
+          url: '/',
+          templateUrl: '../views/partial.intro.html',
+          controller: 'introController'
+        })
+
+        .state('nada', {
           url: '',
           templateUrl: '../views/partial.intro.html',
           controller: 'introController'

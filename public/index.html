@@ -12,11 +12,15 @@
   <script src="/js/controllers/index.controller.js"></script>
   <script src="/js/controllers/show.controller.js"></script>
   <script src="/js/controllers/intro.controller.js"></script>
+  <script src="/js/controllers/nav.controller.js"></script>
 </head>
 
 <body ng-app="softCity">
 
-  <nav>
+  <div ng-controller="navController">
+
+
+  <nav ng-hide="$state.includes('intro')">
     <div class="navbar">
       <a ui-sref="home"><img src="img/softcitylogo.png" alt="Soft City Logo"></a>
     </div>
@@ -27,6 +31,8 @@
       <li class="menu"><a ui-sref="store" class="links" ui-sref-active="active">Store</a></li>
     </ul>
   </nav>
+
+  </div>
 
   <div class="container">
     <div ui-view></div>
