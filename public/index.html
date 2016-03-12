@@ -20,11 +20,12 @@
   <div ng-controller="navController">
 
 
-  <nav ng-hide="$state.includes('intro')">
+  <nav>
     <div class="navbar">
-      <a ui-sref="home"><img src="img/softcitylogo.png" alt="Soft City Logo"></a>
+      <a ui-sref="home"><img src="img/softcitylogo.png" alt="Soft City Logo" id="logo"></a>
     </div>
-    <ul>
+    <ul ng-hide="$state.includes('intro', 'nada')">
+      <li class="menu"><a ui-sref="intro" class="links" ui-sref-active="active">intro</a></li>
       <li class="menu"><a ui-sref="projects" class="links" ui-sref-active="active">Projects</a></li>
       <li class="menu"><a ui-sref="about" class="links" ui-sref-active="active">About</a></li>
       <li class="menu"><a ui-sref="contact" class="links" ui-sref-active="active">Contact</a></li>

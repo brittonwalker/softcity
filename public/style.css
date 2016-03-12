@@ -50,6 +50,9 @@ nav {
   width: 100%;
   justify-content: space-between; }
 
+#logo {
+  animation: fadeIn 3s; }
+
 ul {
   list-style: none;
   display: inline-flex; }
@@ -133,12 +136,6 @@ h2 a {
 
 [ui-view].ng-enter-active {
   animation: fadeIn .5s; }
-
-[ui-view].ng-enter > div.splash {
-  animation: fadeIn 0s; }
-
-[ui-view].ng-enter-active > div.splash {
-  animation: fadeIn 0s; }
 
 .circle-1 {
   background-color: #694089;
