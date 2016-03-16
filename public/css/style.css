@@ -207,7 +207,9 @@ div.indexview img {
   margin-bottom: 20px; }
 
 .indexcontainer {
-  margin-top: 3em; }
+  margin-top: 3em;
+  height: 50vh;
+  overflow: scroll; }
 
 .indexview {
   margin-right: 5em;
