@@ -17,29 +17,23 @@
         $http.get('http://localhost:8050/api/projects')
         .then(function(res) {
           vm.mydata = res.data;
+          console.log(vm.mydata)
         })
       }
 
-      // console.log($scope.auth)
-
       getProjects();
+
+      $scope.deleteProject = function(id) {
+        $http.delete('http://localhost:8050/api/projects/' + id)
+        .then(function(res) {
+          console.log(res);
+          getProjects();
+        });
+      };
 
       var vm = this;
       vm.mydata = [];
       $scope.auth = auth;
-      console.log($scope.auth.isAuthenticated)
-      vm.profile = JSON.parse(localStorage.getItem('profile'));
-
-      vm.checkUser = function() {
-        if (vm.profile.email === 'bwalker1801@gmail.com'){
-          return true;
-          console.log('hell yeah you are logged in');
-        }
-      }
-      //
-      // // vm.checkUser();
-      //
-      // console.log(vm.checkUser());
 
       }
     }());
