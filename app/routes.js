@@ -1,8 +1,10 @@
 var Project = require('./models/project.js');
 var jwt = require('express-jwt');
+var env              = require('../env');
+
 var authCheck = jwt({
-  secret: new Buffer('8B8Y4ItJsEAIUvdGz4RZebhUjT__HmB-vihKSKOYF-3UBM9yPfVsbE9ic9MvjEhS', 'base64'),
-  audience: 'pHfERddgPLyILDkJDiCm0GdSb1nMgdIJ'
+  secret: new Buffer(env.authSecret, 'base64'),
+  audience: env.authClientID
 });
 
 module.exports = function(app) {
