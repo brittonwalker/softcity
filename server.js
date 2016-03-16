@@ -7,14 +7,15 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var jwt = require('express-jwt');
 var cors = require('cors');
 var db = require('./app/config/database.js')
+var env              = require('./env');
 
 // auth0 =========================
 
 app.use(cors());
 
 var authCheck = jwt({
-  secret: new Buffer('8B8Y4ItJsEAIUvdGz4RZebhUjT__HmB-vihKSKOYF-3UBM9yPfVsbE9ic9MvjEhS', 'base64'),
-  audience: 'pHfERddgPLyILDkJDiCm0GdSb1nMgdIJ'
+  secret: new Buffer(env.authSecret, 'base64'),
+  audience: env.authClientID
 });
 
 app.get('/api/public', function(req, res) {
