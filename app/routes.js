@@ -1,4 +1,11 @@
 var Project = require('./models/project.js');
+var jwt = require('express-jwt');
+var env              = require('../env');
+
+var authCheck = jwt({
+  secret: new Buffer(env.authSecret, 'base64'),
+  audience: env.authClientID
+});
 
 module.exports = function(app) {
 
@@ -11,16 +18,15 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/api/projects', function(req, res) {
+  app.post('/api/projects', authCheck, function(req, res) {
     var array = [];
     var images = req.body.img;
-    array.push(images);
     Project.create({
       title: req.body.title,
       about: req.body.about,
       author: req.body.author,
       specs: req.body.specs,
-      img: array
+      img: array.concat(images)
     }, function(err, project) {
       if (err)
         res.send(err);
@@ -73,7 +79,7 @@ module.exports = function(app) {
     });
   });
 
-  app.delete('/api/projects/:project_id', function(req, res) {
+  app.delete('/api/projects/:project_id', /*authCheck,*/ function(req, res) {
     Project.remove({
       _id: req.params.project_id
     }, function(err, project) {

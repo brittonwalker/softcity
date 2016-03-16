@@ -21,6 +21,8 @@ $textColor: #56217c;
   // margin: 0;
 }
 
+ng-md-icon:focus {outline:0;}
+
 body {
   padding: 0 10%;
   border-left: 1em solid #30f7ba;
@@ -239,6 +241,8 @@ div.indexview img {
 
 .indexcontainer {
   margin-top: 3em;
+  height: 50vh;
+  overflow: scroll;
 }
 
 .indexview {
