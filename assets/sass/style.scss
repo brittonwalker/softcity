@@ -17,8 +17,6 @@ $textColor: #56217c;
 
 * {
   box-sizing: border-box;
-  // padding: 0;
-  // margin: 0;
 }
 
 ng-md-icon:focus {outline:0;}
@@ -84,11 +82,7 @@ ul li:last-child {
   margin-right: 0;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
+
 
 h1 {
   line-height: 1.5em;
@@ -101,65 +95,6 @@ h2 {
   font-family: 'Fortescue-Bold'
 }
 
-.color-container {
-  h2 {
-    font-family: 'AvenirLTStd-Black';
-    font-size: 1em;
-  }
-}
-
-.riso-container {
-  h2 {
-    font-family: 'AvenirLTStd-Black';
-    font-size: 1em;
-  }
-}
-
-.social-media-container {
-  margin-top: 200px;
-}
-
-.contact-container {
-  margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-main-container {
-  margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.circle-container1 {
-  display: flex;
-  // align-items: center;
-}
-
-.circle-container2 {
-  display: flex;
-  margin-top: 1em;
-  // align-items: center;
-}
-
-.about-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.riso-container {
-  width: 50%;
-}
-
-h1 span {
-  display: block;
-}
-
-h2 a {
-  margin-right: 1em;
-}
 
 @keyframes fadeIn {
   from {
@@ -198,16 +133,7 @@ h2 a {
   animation: fadeIn 0s;
 }
 
-$colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #992aec #edd72d;
-@each $current-color in $colors-list {
-  $i: index($colors-list, $current-color);
-  .circle-#{$i} {
-    @extend .circle;
-    background-color: $current-color;
-    // display: inline;
-    margin-right: 1.5em;
-  }
-}
+
 
 .active {
   border-bottom: 3px solid #30f7ba;
@@ -229,8 +155,6 @@ div.indexview p {
 }
 
 div.indexview a {
-  // margin: 0;
-  // padding: 0;
   line-height: 1.5em;
   font-size: 1.2em;
 }
@@ -241,7 +165,7 @@ div.indexview img {
 
 .indexcontainer {
   margin-top: 3em;
-  height: 50vh;
+  height: 75vh;
   overflow: scroll;
 }
 
@@ -255,7 +179,7 @@ div.indexview img {
   width: 40%;
   float: left;
   padding-right: 2em;
-  position: sticky;
+  position: static;
   text-align: justify;
 }
 
@@ -273,10 +197,14 @@ div.indexview img {
   margin-bottom: 2em;
 }
 
+.img-stick {
+  overflow: scroll;
+  height: 50vh;
+}
+
 .splash {
   width: 100vw;
   height: 100vh;
-  // background-color: white;
   z-index: 100;
   position: absolute;
   top: 0;
@@ -311,12 +239,77 @@ div.indexview img {
   margin: 0 auto;
 }
 
-.splash {
-  // animation: fadeIn 1s;
+// PROJECT INDEX PAGE ////////////////////////////////////////
+
+// ABOUT PAGE ////////////////////////////////////////////////
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
-// .splash img {
-//   display: block;
-//   margin: 0 auto;
-//   margin-top: 5%;
-// }
+$colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #992aec #edd72d;
+@each $current-color in $colors-list {
+  $i: index($colors-list, $current-color);
+  .circle-#{$i} {
+    @extend .circle;
+    background-color: $current-color;
+    margin-right: 1.5em;
+  }
+}
+
+.about-main-container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  .riso-container {
+    width: 50%;
+    h2 {
+      font-family: 'AvenirLTStd-Black';
+      font-size: 1em;
+    }
+  }
+}
+
+.color-container {
+  h2 {
+    font-family: 'AvenirLTStd-Black';
+    font-size: 1em;
+  }
+  .circle-container1 {
+    display: flex;
+  }
+  .circle-container2 {
+    display: flex;
+    margin-top: 1em;
+  }
+}
+
+// CONTACT PAGE //////////////////////////////////////////////
+.social-media-container {
+  margin-top: 200px;
+  h2 {
+    a {
+      margin-right: 1em;
+    }
+  }
+}
+
+.contact-container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    span {
+      display: block;
+    }
+  }
+}
