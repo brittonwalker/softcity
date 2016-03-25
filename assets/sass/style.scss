@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 $textColor: #56217c;
 
+// FONTS
 @font-face {
   font-family: "AvenirLTStd-Black";
   src: url(../avenir/AvenirLTStd-Black.otf) format('opentype');
@@ -13,10 +18,6 @@ $textColor: #56217c;
 .menu {
   font-family: 'AvenirLTStd-Black';
   color: $textColor;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 ng-md-icon:focus {outline:0;}
@@ -246,7 +247,7 @@ div.indexview img {
 .circle {
   border-radius: 50%;
   width: 40px;
-  height: 40px;
+  height: 40px; 
 }
 
 $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #992aec #edd72d;

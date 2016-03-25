@@ -53,12 +53,13 @@ module.exports = function(app) {
       if (err)
         res.send(err);
 
+      var array = [];
+      var images = req.body.img;
       project.title = req.body.title;
       project.about = req.body.about;
       project.author = req.body.author;
       project.specs = req.body.specs;
-      var path = req.body.img;
-      project.img.push(path);
+      project.img = array.concat(images)
 
       project.save(function(err) {
         if (err)

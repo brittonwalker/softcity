@@ -4,6 +4,42 @@
   <p>{{ show.mydata.about }}</p>
   <p>{{ show.mydata.author }}</p>
   <p>{{ show.mydata.specs }}</p>
+
+
+  <form name="update-project-form" ng-submit="updateProject()" novalidate ng-show="auth.profile.email === 'bwalker1801@gmail.com'">
+  <h1>Update Project</h1>
+
+    <md-input-container class="md-icon-float md-block">
+      <label>Project Name</label>
+      <input ng-model="show.mydata.title" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block">
+      <label>Author</label>
+      <input ng-model="show.mydata.author" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block">
+      <label>Description</label>
+      <input ng-model="show.mydata.about" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block">
+      <label>Specs</label>
+      <input ng-model="show.mydata.specs" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block" ng-repeat="img in show.mydata.img track by $index">
+      <label>Image Url</label>
+      <input ng-model="show.mydata.img[$index]" type="text">
+    </md-input-container>
+
+    <div layout-align="space-between none" layout="row">
+      <ng-md-icon icon="add_circle" ng-click="addField()" size="40" style="fill: #56217c" type="button">Add Img Url Field</ng-md-icon>
+      <ng-md-icon icon="remove_circle" ng-click="removeField()" size="40" style="fill: #56217c" type="button">Add Img Url Field</ng-md-icon>
+    <md-button class="md-raised md-primary" id="submit" type="submit" value="Submit" ng-submit="updateProject()">Submit</md-button>
+    </div>
+
+  </form>
+
+
+
   </div>
   <div ng-repeat="item in show.mydata.img" class="image-container">
     <img src="{{ item }}" alt="">
