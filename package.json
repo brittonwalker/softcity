@@ -1,6 +1,9 @@
 {
   "name": "soft_city",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.2.4"
+  },
   "description": "Soft City Printing Website",
   "main": "server.js",
   "scripts": {
