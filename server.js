@@ -7,7 +7,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var jwt = require('express-jwt');
 var cors = require('cors');
 var db = require('./app/config/database.js')
-var env              = require('./env');
+var env              = require('env');
 
 // auth0 =========================
 
