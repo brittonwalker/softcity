@@ -1,10 +1,10 @@
 var Project = require('./models/project.js');
 var jwt = require('express-jwt');
-// var env              = require('../env');
+var env              = require('../env.json');
 
 var authCheck = jwt({
-  secret: new Buffer(process.env.authSecret, 'base64'),
-  audience: process.env.authClientID
+  secret: new Buffer(env.authSecret, 'base64'),
+  audience: env.authClientID
 });
 
 module.exports = function(app) {
