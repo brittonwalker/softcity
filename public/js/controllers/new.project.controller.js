@@ -14,7 +14,7 @@
   function formFunction($http, $scope, $state) {
 
     $scope.formData = {};
-    $scope.url = 'http://localhost:8050/api/projects/';
+    $scope.url = 'https://soft-city.herokuapp.com/api/projects/';
     $scope.formData.img = [''];
 
     $scope.addField = function(){
