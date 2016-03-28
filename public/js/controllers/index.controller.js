@@ -24,7 +24,7 @@
       getProjects();
 
       $scope.deleteProject = function(id) {
-        $http.delete('https://soft-city.herokuapp.com/api/projects' + id)
+        $http.delete('https://soft-city.herokuapp.com/api/projects/' + id)
         .then(function(res) {
           console.log(res);
           getProjects();

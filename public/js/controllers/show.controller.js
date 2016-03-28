@@ -14,7 +14,7 @@
     function ShowControllerFunction($scope, $http, $stateParams, auth) {
 
       var id = $stateParams.id;
-      $scope.url = 'http://localhost:8050/api/projects/' + id;
+      $scope.url = 'https://soft-city.herokuapp.com/api/projects/' + id;
 
       var vm = this;
       // vm.mydata = {};
