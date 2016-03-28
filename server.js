@@ -47,5 +47,5 @@ require('./app/routes.js')(app);
 // app.use('/api', app);
 
 // listen (start app with node server.js) ======================================
-app.listen(8050);
+app.listen(process.env.PORT || 8050);
 console.log("App listening on port 8050");
