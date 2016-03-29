@@ -3,7 +3,7 @@
     <img src='{{ item.img[0] }}' height="300">
     <p><a data-ui-sref="projectShow({id: item._id})">{{ item.title }}</a></p>
     <p class="author">By {{ item.author }}</p>
-    <div class="" ng-show="auth.profile.email === 'bwalker1801@gmail.com' || 'softcityprinting@gmail.com'">
+    <div class="" ng-show="auth.profile.email == 'bwalker1801@gmail.com'">
       <div layout-align="center center" layout="row">
         <ng-md-icon icon="remove_circle" ng-click="deleteProject(item._id)" size="40" style="fill: #56217c" type="button"></ng-md-icon>
       </div>

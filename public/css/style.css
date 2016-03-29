@@ -7,13 +7,6 @@
 @font-face {
   font-family: "Fortescue-Bold";
   src: url(../fortescue/Fortescue-Bold.otf) format("opentype"); }
-.menu {
-  font-family: 'AvenirLTStd-Black';
-  color: #56217c; }
-
-ng-md-icon:focus {
-  outline: 0; }
-
 body {
   padding: 0 10%;
   border-left: 1em solid #30f7ba;
@@ -27,12 +20,15 @@ body {
   -moz-background-size: 3px 3px;
   background-size: 40px 40px; }
 
-h1, h2, p {
+h1,
+h2,
+p {
   color: #56217c;
-  font-family: "Fortescue-Bold"; }
+  font-family: 'Fortescue-Bold'; }
 
 h2 {
-  font-family: 'AvenirLTStd-Black'; }
+  font-family: 'AvenirLTStd-Black';
+  text-transform: uppercase; }
 
 p {
   line-height: 2em; }
@@ -40,10 +36,17 @@ p {
 a {
   text-decoration: none; }
 
-.email {
-  border-bottom: 3px solid #56217c;
-  padding-bottom: 3px;
-  text-transform: none; }
+h1 {
+  line-height: 1.5em;
+  text-align: left;
+  font-size: 2.5em; }
+
+ng-md-icon:focus {
+  outline: 0; }
+
+.menu {
+  font-family: 'AvenirLTStd-Black';
+  color: #56217c; }
 
 nav {
   display: flex;
@@ -56,22 +59,16 @@ nav {
 ul {
   list-style: none;
   display: inline-flex; }
+  ul li {
+    margin-right: 3rem;
+    text-transform: uppercase; }
+  ul li:last-child {
+    margin-right: 0; }
 
-li {
-  margin-right: 3rem;
-  text-transform: uppercase; }
-
-ul li:last-child {
-  margin-right: 0; }
-
-h1 {
-  line-height: 1.5em;
-  text-align: left;
-  font-size: 2.5em; }
-
-h2 {
-  text-transform: uppercase;
-  font-family: "Fortescue-Bold"; }
+.email {
+  border-bottom: 3px solid #56217c;
+  padding-bottom: 3px;
+  text-transform: none; }
 
 @keyframes fadeIn {
   from {
@@ -84,10 +81,10 @@ h2 {
   to {
     opacity: 0; } }
 [ui-view].ng-enter {
-  animation: fadeIn .5s; }
+  animation: fadeIn 0.5s; }
 
 [ui-view].ng-enter-active {
-  animation: fadeIn .5s; }
+  animation: fadeIn 0.5s; }
 
 [ui-view].ng-enter > div.splash {
   animation: fadeIn 0s; }
@@ -105,46 +102,41 @@ h2 {
   margin: 0;
   padding: 0; }
 
-div.indexview p {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  font-size: 1em; }
-
-div.indexview a {
-  line-height: 1.5em;
-  font-size: 1.2em; }
-
-div.indexview img {
-  margin-bottom: 20px; }
-
-.indexcontainer {
-  margin-top: 3em;
-  height: 75vh;
-  overflow: scroll; }
-
-.indexview {
-  margin-right: 5em;
-  margin-bottom: 5em;
-  display: inline-block; }
-
 .description {
   width: 40%;
   float: left;
   padding-right: 2em;
   position: static;
   text-align: justify; }
-
-.description h2 {
-  margin: 0; }
+  .description h2 {
+    margin: 0; }
 
 .image-container {
   width: 60%;
   float: right; }
+  .image-container img {
+    width: 100%;
+    margin-bottom: 2em; }
 
-.image-container img {
-  width: 100%;
-  margin-bottom: 2em; }
+div.indexview {
+  margin-right: 5em;
+  margin-bottom: 5em;
+  display: inline-block; }
+  div.indexview p {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-size: 1em; }
+  div.indexview a {
+    line-height: 1.5em;
+    font-size: 1.2em; }
+  div.indexview img {
+    margin-bottom: 20px; }
+
+.indexcontainer {
+  margin-top: 3em;
+  height: 75vh;
+  overflow: scroll; }
 
 .img-stick {
   overflow: scroll;
