@@ -7,42 +7,40 @@
 @font-face {
   font-family: "Fortescue-Bold";
   src: url(../fortescue/Fortescue-Bold.otf) format("opentype"); }
+html {
+  min-height: 100%;
+  margin: 0; }
+
 body {
   padding: 0 10%;
-  border-left: 1em solid #30f7ba;
-  height: 100vh;
-  margin: 0;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 100%);
   background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
-  background-size: 40px 40px; }
+  background-size: 40px 40px;
+  margin: 0;
+  min-height: 100%; }
 
-h1,
-h2,
-p {
+h1, h2, p {
   color: #56217c;
   font-family: 'Fortescue-Bold'; }
 
-h2 {
-  font-family: 'AvenirLTStd-Black';
-  text-transform: uppercase; }
-
-p {
-  line-height: 2em; }
-
-a {
-  text-decoration: none; }
-
-h1 {
-  line-height: 1.5em;
-  text-align: left;
-  font-size: 2.5em; }
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #56217c; }
 
 ng-md-icon:focus {
   outline: 0; }
+
+.green {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1em;
+  background-color: #30f7ba; }
 
 .menu {
   font-family: 'AvenirLTStd-Black';
@@ -70,6 +68,9 @@ ul {
   padding-bottom: 3px;
   text-transform: none; }
 
+.social-media-container a {
+  font-family: Fortescue-Bold; }
+
 @keyframes fadeIn {
   from {
     opacity: 0; }
@@ -96,11 +97,8 @@ ul {
   border-bottom: 3px solid #30f7ba;
   padding-bottom: 3px; }
 
-.author {
-  font-family: 'AvenirLTStd-Black';
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0; }
+.show-container {
+  margin-top: 80px; }
 
 .description {
   width: 40%;
@@ -110,37 +108,38 @@ ul {
   text-align: justify; }
   .description h2 {
     margin: 0; }
+  .description p:first-of-type {
+    line-height: 2em;
+    letter-spacing: 1px; }
 
 .image-container {
   width: 60%;
-  float: right; }
+  float: right;
+  margin: 0; }
   .image-container img {
-    width: 100%;
+    float: right;
+    margin-right: 0;
+    height: 400px;
     margin-bottom: 2em; }
 
-div.indexview {
-  margin-right: 5em;
-  margin-bottom: 5em;
-  display: inline-block; }
-  div.indexview p {
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    font-size: 1em; }
-  div.indexview a {
-    line-height: 1.5em;
-    font-size: 1.2em; }
-  div.indexview img {
-    margin-bottom: 20px; }
-
 .indexcontainer {
-  margin-top: 3em;
-  height: 75vh;
-  overflow: scroll; }
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between; }
 
-.img-stick {
-  overflow: scroll;
-  height: 50vh; }
+.indexview {
+  text-align: center;
+  line-height: 0; }
+  .indexview p {
+    font-family: AvenirLTStd-Black;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 2px;
+    margin-bottom: 2em; }
+  .indexview h3 {
+    font-family: Fortescue-Bold;
+    font-size: 1.7em;
+    letter-spacing: 1px; }
 
 .splash {
   width: 100vw;
@@ -226,6 +225,11 @@ div.indexview {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .about-main-container h1 {
+    word-spacing: .1em;
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 2.5em; }
 
 .about-container {
   display: flex;
@@ -234,11 +238,17 @@ div.indexview {
     width: 50%; }
     .about-container .riso-container h2 {
       font-family: 'AvenirLTStd-Black';
-      font-size: 1em; }
+      font-size: .8em;
+      text-transform: uppercase; }
+    .about-container .riso-container p {
+      font-size: 1.2em;
+      line-height: 2em; }
 
 .color-container h2 {
   font-family: 'AvenirLTStd-Black';
-  font-size: 1em; }
+  font-size: .8em;
+  margin-bottom: 2em;
+  text-transform: uppercase; }
 .color-container .circle-container1 {
   display: flex; }
 .color-container .circle-container2 {
@@ -247,15 +257,22 @@ div.indexview {
 
 .social-media-container {
   margin-top: 200px; }
-  .social-media-container h2 a {
-    margin-right: 1em; }
+  .social-media-container h2 {
+    font-family: 'AvenirLTStd-Black';
+    text-transform: uppercase; }
+    .social-media-container h2 a {
+      margin-right: 1em; }
 
 .contact-container {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  .contact-container h1 span {
-    display: block; }
+  .contact-container h1 {
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 2.5em; }
+    .contact-container h1 span {
+      display: block; }
 
 /*# sourceMappingURL=style.css.map */

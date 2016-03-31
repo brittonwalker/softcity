@@ -16,42 +16,41 @@ $textColor: #56217c;
 }
 
 // GLOBAL STYLES /////////////////////////////////////
+html {
+    min-height: 100%;
+    margin: 0;
+}
 body {
   padding: 0 10%;
-  border-left: 1em solid #30f7ba;
-  height: 100vh;
-  margin: 0;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 2px, transparent 2px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 2px, transparent 2px, transparent 100%) ;
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
   background-size: 40px 40px;
+  margin: 0;
+  min-height: 100%;
 }
-h1,
-h2,
-p {
+h1, h2, p {
   color: $textColor;
   font-family: 'Fortescue-Bold';
 }
-h2 {
-  font-family: 'AvenirLTStd-Black';
-  text-transform: uppercase;
-}
-p {
-  line-height: 2em;
-}
-a {
+a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-}
-h1 {
-  line-height: 1.5em;
-  text-align: left;
-  font-size: 2.5em;
+  color: $textColor;
 }
 ng-md-icon:focus {
   outline: 0;
+}
+
+.green {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1em;
+  background-color: #30f7ba;
 }
 
 // MENU //////////////////////////////////////////////
@@ -84,6 +83,10 @@ ul {
   border-bottom: 3px solid $textColor;
   padding-bottom: 3px;
   text-transform: none;
+}
+
+.social-media-container a {
+  font-family: Fortescue-Bold;
 }
 
 // ANIMATIONS ////////////////////////////////////////
@@ -121,12 +124,10 @@ ul {
 }
 
 // PROJECTS PAGE //////////////////////////////////////
-.author {
-  font-family: 'AvenirLTStd-Black';
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
+.show-container {
+  margin-top: 80px;
 }
+
 .description {
   width: 40%;
   float: left;
@@ -136,44 +137,45 @@ ul {
   h2 {
     margin: 0;
   }
+  p:first-of-type {
+    line-height: 2em;
+    letter-spacing: 1px;
+  }
 }
 .image-container {
   width: 60%;
   float: right;
+  margin: 0;
   img {
-    width: 100%;
+    float: right;
+    margin-right: 0;
+    height: 400px;
     margin-bottom: 2em;
   }
 }
 
 // INDEX PAGE //////////////////////////////////////
-div.indexview {
-  margin-right: 5em;
-  margin-bottom: 5em;
-  display: inline-block;
-  p {
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    font-size: 1em;
-  }
-  a {
-    line-height: 1.5em;
-    font-size: 1.2em;
-  }
-  img {
-    margin-bottom: 20px;
-  }
-}
 .indexcontainer {
-  margin-top: 3em;
-  height: 75vh;
-  overflow: scroll;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.img-stick {
-  overflow: scroll;
-  height: 50vh;
+.indexview {
+  text-align: center;
+  line-height: 0;
+  p {
+    font-family: AvenirLTStd-Black;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+  }
+  h3 {
+    font-family: Fortescue-Bold;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+  }
 }
 
 // SPLASH INTRO //////////////////////////////////////
@@ -234,6 +236,12 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   display: flex;
   flex-direction: column;
   justify-content: center;
+  h1 {
+    word-spacing: .1em;
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 2.5em;
+  }
 }
 .about-container {
   display: flex;
@@ -242,14 +250,21 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
     width: 50%;
     h2 {
       font-family: 'AvenirLTStd-Black';
-      font-size: 1em;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 2em;
     }
   }
 }
 .color-container {
   h2 {
     font-family: 'AvenirLTStd-Black';
-    font-size: 1em;
+    font-size: .8em;
+    margin-bottom: 2em;
+    text-transform: uppercase;
   }
   .circle-container1 {
     display: flex;
@@ -264,6 +279,8 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
 .social-media-container {
   margin-top: 200px;
   h2 {
+    font-family: 'AvenirLTStd-Black';
+    text-transform: uppercase;
     a {
       margin-right: 1em;
     }
@@ -275,6 +292,9 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   flex-direction: column;
   justify-content: center;
   h1 {
+      line-height: 1.5em;
+      text-align: left;
+      font-size: 2.5em;
     span {
       display: block;
     }
