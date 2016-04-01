@@ -63,31 +63,24 @@ and (orientation : portrait) {
   }
   .navbar {
     display: none;
-    margin: 0;
-    padding: 0;
-  }
-  .menu {
-    font-family: 'AvenirLTStd-Black';
-    color: $textColor;
   }
   nav {
-    display: block;
-    font-size: 10px;
-    // align-items: flex-start;
-    list-style-type: none;
+    display: flex;
     padding-top: 0;
-    width: 100vw;
-    justify-content: space-around;
-  }
-  ul {
-    list-style: none;
-    display: block;
-    li {
-      margin: 0;
-      text-transform: uppercase;
-    }
-    li:last-child {
-      margin-right: 0;
+    // width: 100vw;
+    ul {
+      flex-direction: column;
+      width: 100vw;
+      li {
+        margin: 0;
+        margin-bottom: 5px;
+        a {
+          display: block;
+        }
+      }
+      li:last-child {
+        margin: 0;
+      }
     }
   }
   .green {
@@ -106,16 +99,16 @@ nav {
   padding-top: 4%;
   width: 100%;
   justify-content: space-between;
-}
-ul {
-  list-style: none;
-  display: inline-flex;
-  li {
-    margin-right: 3rem;
-    text-transform: uppercase;
-  }
-  li:last-child {
-    margin-right: 0;
+  ul {
+    list-style: none;
+    display: inline-flex;
+    li {
+      margin-right: 3rem;
+      text-transform: uppercase;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
   }
 }
 
