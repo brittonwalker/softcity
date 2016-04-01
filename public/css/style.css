@@ -46,21 +46,31 @@ ng-md-icon:focus {
   body {
     padding: 0; }
 
-  nav {
-    flex-direction: column; }
-
   .navbar {
-    display: none; }
+    display: none;
+    margin: 0;
+    padding: 0; }
+
+  .menu {
+    font-family: 'AvenirLTStd-Black';
+    color: #56217c; }
+
+  nav {
+    display: block;
+    font-size: 10px;
+    list-style-type: none;
+    padding-top: 0;
+    width: 100vw;
+    justify-content: space-around; }
 
   ul {
-    display: none;
-    text-align: center;
-    flex-direction: column;
-    margin: 0 auto; }
+    list-style: none;
+    display: block; }
     ul li {
       margin: 0;
-      margin-bottom: 1em;
-      margin: 0 auto; }
+      text-transform: uppercase; }
+    ul li:last-child {
+      margin-right: 0; }
 
   .green {
     display: none; } }
@@ -413,7 +423,7 @@ ul {
     position: static;
     justify-content: space-between; }
     .social-media-container h2 {
-      margin: 0 auto; }
+      font-size: 18px; }
       .social-media-container h2 a {
         margin-right: 0; }
       .social-media-container h2 a:first-of-type {
