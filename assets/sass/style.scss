@@ -77,27 +77,8 @@ and (orientation : portrait) {
       margin: 0;
       margin-bottom: 1em;
       margin: 0 auto;
-      // float: left;
     }
   }
-  // nav {
-  //   width: 100vw;
-  // }
-  // #logo {
-  //   display: none;
-  // }
-  //
-  // ul {
-  //   display: flex;
-  //
-  //   // text-align: center;
-  //   li {
-  //     justify-content: space-between;
-  //     // margin: 0 auto;
-  //     // margin-bottom: 3em;
-  //     // text-align: center;
-  //   }
-  // }
   .green {
     display: none;
   }
@@ -198,7 +179,7 @@ ul {
   img {
     float: right;
     margin-right: 0;
-    height: 400px;
+    width: 100%;
     margin-bottom: 2em;
   }
 }

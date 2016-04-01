@@ -140,7 +140,7 @@ ul {
   .image-container img {
     float: right;
     margin-right: 0;
-    height: 400px;
+    width: 100%;
     margin-bottom: 2em; }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
