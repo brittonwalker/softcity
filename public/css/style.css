@@ -42,7 +42,7 @@ ng-md-icon:focus {
   width: 1em;
   background-color: #30f7ba; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   body {
     padding: 0; }
 
@@ -143,7 +143,7 @@ ul {
     height: 400px;
     margin-bottom: 2em; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .show-container {
     text-align: center; }
 
@@ -190,7 +190,7 @@ ul {
 #image {
   height: 300px; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .indexcontainer {
     display: block;
     width: 100vw;
@@ -324,7 +324,7 @@ ul {
   display: flex;
   margin-top: 1em; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .about-main-container {
     display: block;
     position: absolute;
@@ -390,7 +390,7 @@ ul {
     .social-media-container h2 a {
       margin-right: 1em; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .contact {
     margin-top: 100px; }
 
