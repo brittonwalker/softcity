@@ -2,7 +2,7 @@
   <div ng-repeat="item in index.mydata" class="indexview">
     <h3 class="title"><a data-ui-sref="projectShow({id: item._id})">{{ item.title }}</a></h3>
     <p>By {{ item.author }}</p>
-    <a data-ui-sref="projectShow({id: item._id})"><img src='{{ item.img[0] }}' height="300"></a>
+    <a data-ui-sref="projectShow({id: item._id})"><img src='{{ item.img[0] }}' id="image"></a>
     <div class="" ng-show="auth.profile">
       <div layout-align="center center" layout="row">
         <ng-md-icon icon="remove_circle" ng-click="deleteProject(item._id)" size="40" style="fill: #56217c" type="button"></ng-md-icon>
