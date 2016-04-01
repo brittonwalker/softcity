@@ -3,10 +3,10 @@
 
 @font-face {
   font-family: "AvenirLTStd-Black";
-  src: url(https://www.dropbox.com/s/pqju24yf5olqrc6/AvenirLTStd-Black.otf?dl=0) format("opentype"); }
+  src: url(../fonts/avenir/AvenirLTStd-Black.otf) format("opentype"); }
 @font-face {
   font-family: "Fortescue-Bold";
-  src: url("https://www.dropbox.com/s/7kri62bck2mahsw/Fortescue-Bold.otf?dl=0") format("opentype"); }
+  src: url(../fonts/fortescue/Fortescue-Bold.otf) format("opentype"); }
 html {
   min-height: 100%;
   margin: 0; }
