@@ -5,6 +5,16 @@
 // VARIABLES //////////////////////////////////////////
 $textColor: #56217c;
 
+@mixin background-gradient {
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 2px, transparent 2px, transparent 100%) ;
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 40px 40px;
+}
+
 // FONTS //////////////////////////////////////////////
 @font-face {
   font-family: "AvenirLTStd-Black";
@@ -17,20 +27,25 @@ $textColor: #56217c;
 
 // GLOBAL STYLES /////////////////////////////////////
 html {
-    min-height: 100%;
     margin: 0;
+    @include background-gradient;
 }
 body {
   padding: 0 10%;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 2px, transparent 2px, transparent 100%) ;
-  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
-  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
-  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%) ;
-  -webkit-background-size: 3px 3px;
-  -moz-background-size: 3px 3px;
-  background-size: 40px 40px;
+  @include background-gradient;
   margin: 0;
-  min-height: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  resize: vertical;
+  overflow: auto;
+}
+main div {
+  resize: vertical;
+
 }
 h1, h2, p {
   color: $textColor;
@@ -55,6 +70,29 @@ ng-md-icon:focus {
 
 // MENU //////////////////////////////////////////////
 
+.menu {
+  font-family: 'AvenirLTStd-Black';
+  color: $textColor;
+}
+nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 2em 0 3em 0;
+  justify-content: space-between;
+  ul {
+    list-style: none;
+    display: inline-flex;
+    li {
+      margin-right: 3rem;
+      text-transform: uppercase;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 @media only screen and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
@@ -67,7 +105,6 @@ and (orientation : portrait) {
   nav {
     display: flex;
     padding-top: 0;
-    // width: 100vw;
     ul {
       flex-direction: column;
       width: 100vw;
@@ -85,30 +122,6 @@ and (orientation : portrait) {
   }
   .green {
     display: none;
-  }
-}
-
-.menu {
-  font-family: 'AvenirLTStd-Black';
-  color: $textColor;
-}
-nav {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding-top: 4%;
-  width: 100%;
-  justify-content: space-between;
-  ul {
-    list-style: none;
-    display: inline-flex;
-    li {
-      margin-right: 3rem;
-      text-transform: uppercase;
-    }
-    li:last-child {
-      margin-right: 0;
-    }
   }
 }
 
@@ -159,15 +172,16 @@ nav {
 
 // PROJECTS PAGE //////////////////////////////////////
 .show-container {
-  margin-top: 80px;
+  // margin-top: 80px;
+  // max-height: 100%;
 }
 
 .description {
-  width: 40%;
+  width: 50%;
   float: left;
   padding-right: 2em;
-  // position: static;
-  text-align: justify;
+  font-size: 100%;
+  max-height: 50%;
   h2 {
     margin: 0;
   }
@@ -175,16 +189,24 @@ nav {
     line-height: 2em;
     letter-spacing: 1px;
   }
+  p:nth-child(3) {
+    font-family: AvenirLTStd-Black;
+  }
 }
 .image-container {
-  width: 60%;
+  width: 50%;
   float: right;
   margin: 0;
+  height: 70vh;
+  overflow: scroll;
   img {
     float: right;
     margin-right: 0;
     width: 100%;
     margin-bottom: 2em;
+  }
+  img:last-of-type {
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-device-width : 375px)
@@ -220,14 +242,21 @@ and (orientation : portrait) {
 }
 // INDEX PAGE //////////////////////////////////////
 .indexcontainer {
-  margin-top: 80px;
+  // margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: 75vh;
+  overflow-y: scroll;
+  div.indexview:nth-child(odd) {
+    margin-right: 2em;
+  }
 }
 
 .indexview {
   text-align: center;
   line-height: 0;
+  margin-bottom: 2em;
   p {
     font-family: AvenirLTStd-Black;
     text-transform: uppercase;
@@ -328,7 +357,7 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   }
 }
 .about-main-container {
-  margin-top: 3em;
+  // margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -337,6 +366,7 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
     line-height: 1.5em;
     text-align: left;
     font-size: 2.5em;
+    margin-top: 0;
   }
 }
 .about-container {
@@ -433,14 +463,15 @@ and (orientation : portrait) {
 
 // CONTACT PAGE //////////////////////////////////////////////
 .contact-container {
-  margin-top: 3em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   h1 {
-      line-height: 1.5em;
       text-align: left;
       font-size: 2.5em;
+    a {
+      line-height: 1.5em;
+    }
     span {
       display: block;
     }

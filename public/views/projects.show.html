@@ -4,6 +4,8 @@
   <p>{{ show.mydata.about }}</p>
   <p>{{ show.mydata.author }}</p>
   <p>{{ show.mydata.specs }}</p>
+  <md-button class="md-raised md-primary" >$15</md-button>
+  </div>
 
 
   <form name="update-project-form" ng-submit="updateProject()" novalidate ng-show="auth.profile">
@@ -41,7 +43,7 @@
 
 
   </div>
-  <div ng-repeat="item in show.mydata.img" class="image-container">
-    <img src="{{ item }}" alt="" id="show-image">
+  <div class="image-container">
+    <img ng-repeat="item in show.mydata.img" src="{{ item }}" alt="" id="show-image">
   </div>
 </div>
