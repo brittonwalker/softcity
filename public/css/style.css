@@ -8,8 +8,14 @@
   font-family: "Fortescue-Bold";
   src: url(../fonts/fortescue/Fortescue-Bold.otf) format("opentype"); }
 html {
-  min-height: 100%;
-  margin: 0; }
+  margin: 0;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 40px 40px; }
 
 body {
   padding: 0 10%;
@@ -20,8 +26,18 @@ body {
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
   background-size: 40px 40px;
-  margin: 0;
-  min-height: 100%; }
+  margin: 0; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  resize: vertical;
+  overflow: auto; }
+
+main div {
+  resize: vertical; }
 
 h1, h2, p {
   color: #56217c;
@@ -41,6 +57,25 @@ ng-md-icon:focus {
   height: 100%;
   width: 1em;
   background-color: #30f7ba; }
+
+.menu {
+  font-family: 'AvenirLTStd-Black';
+  color: #56217c; }
+
+nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 2em 0 3em 0;
+  justify-content: space-between; }
+  nav ul {
+    list-style: none;
+    display: inline-flex; }
+    nav ul li {
+      margin-right: 3rem;
+      text-transform: uppercase; }
+    nav ul li:last-child {
+      margin-right: 0; }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   body {
@@ -65,26 +100,6 @@ ng-md-icon:focus {
 
   .green {
     display: none; } }
-.menu {
-  font-family: 'AvenirLTStd-Black';
-  color: #56217c; }
-
-nav {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding-top: 4%;
-  width: 100%;
-  justify-content: space-between; }
-  nav ul {
-    list-style: none;
-    display: inline-flex; }
-    nav ul li {
-      margin-right: 3rem;
-      text-transform: uppercase; }
-    nav ul li:last-child {
-      margin-right: 0; }
-
 .email {
   border-bottom: 3px solid #56217c;
   padding-bottom: 3px;
@@ -119,29 +134,33 @@ nav {
   border-bottom: 3px solid #30f7ba;
   padding-bottom: 3px; }
 
-.show-container {
-  margin-top: 80px; }
-
 .description {
-  width: 40%;
+  width: 50%;
   float: left;
   padding-right: 2em;
-  text-align: justify; }
+  font-size: 100%;
+  max-height: 50%; }
   .description h2 {
     margin: 0; }
   .description p:first-of-type {
     line-height: 2em;
     letter-spacing: 1px; }
+  .description p:nth-child(3) {
+    font-family: AvenirLTStd-Black; }
 
 .image-container {
-  width: 60%;
+  width: 50%;
   float: right;
-  margin: 0; }
+  margin: 0;
+  height: 70vh;
+  overflow: scroll; }
   .image-container img {
     float: right;
     margin-right: 0;
     width: 100%;
     margin-bottom: 2em; }
+  .image-container img:last-of-type {
+    margin-bottom: 0; }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .show-container {
@@ -169,13 +188,18 @@ nav {
     width: 100%;
     float: none; } }
 .indexcontainer {
-  margin-top: 80px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 75vh;
+  overflow-y: scroll; }
+  .indexcontainer div.indexview:nth-child(odd) {
+    margin-right: 2em; }
 
 .indexview {
   text-align: center;
-  line-height: 0; }
+  line-height: 0;
+  margin-bottom: 2em; }
   .indexview p {
     font-family: AvenirLTStd-Black;
     text-transform: uppercase;
@@ -290,7 +314,6 @@ nav {
   margin-right: 1.5em; }
 
 .about-main-container {
-  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -298,7 +321,8 @@ nav {
     word-spacing: .1em;
     line-height: 1.5em;
     text-align: left;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    margin-top: 0; }
 
 .about-container {
   display: flex;
@@ -371,14 +395,14 @@ nav {
     width: 30px;
     height: 30px; } }
 .contact-container {
-  margin-top: 3em;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: flex-end; }
   .contact-container h1 {
-    line-height: 1.5em;
     text-align: left;
     font-size: 2.5em; }
+    .contact-container h1 a {
+      line-height: 1.5em; }
     .contact-container h1 span {
       display: block; }
 
