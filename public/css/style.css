@@ -326,9 +326,11 @@ nav {
 
 .about-container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
   .about-container .riso-container {
-    width: 50%; }
+    width: 60%;
+    margin-right: 3em; }
     .about-container .riso-container h2 {
       font-family: 'AvenirLTStd-Black';
       font-size: .8em;

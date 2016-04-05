@@ -372,8 +372,10 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
 .about-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   .riso-container {
-    width: 50%;
+    width: 60%;
+    margin-right: 3em;
     h2 {
       font-family: 'AvenirLTStd-Black';
       font-size: .8em;
