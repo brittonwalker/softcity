@@ -17,12 +17,13 @@
       $scope.url = 'https://soft-city.herokuapp.com/api/projects/' + id;
 
       var vm = this;
-      // vm.mydata = {};
+      vm.mydata = {};
 
       var getProject = function() {
         $http.get($scope.url)
         .then(function(res) {
           vm.mydata = res.data;
+          console.log(vm.mydata)
         })
       };
 
@@ -32,6 +33,7 @@
 
       $scope.updateProject = function() {
         console.log(vm.mydata)
+        // console.log(show.mydata)
         $http({
             method: 'PUT',
             url: $scope.url,
@@ -41,7 +43,8 @@
             }
           })
           .success(function(data) {
-            console.log('got it')
+            console.log(data);
+            getProject();
           })
       };
 

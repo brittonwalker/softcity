@@ -31,7 +31,7 @@ html {
     @include background-gradient;
 }
 body {
-  padding: 0 10%;
+  // padding-top: 0 10%;
   @include background-gradient;
   margin: 0;
 }
@@ -41,11 +41,14 @@ main {
   justify-content: center;
   align-content: center;
   resize: vertical;
-  overflow: auto;
+  position: absolute;
+  top: 190px;
+  // overflow: auto;
+  margin: 0px 10%;
 }
 main div {
-  resize: vertical;
-
+  // resize: vertical;
+  // margin-top: 160px;
 }
 h1, h2, p {
   color: $textColor;
@@ -76,9 +79,12 @@ ng-md-icon:focus {
 }
 nav {
   display: flex;
+  position: fixed;
+  width: 80%;
   align-items: center;
   list-style-type: none;
   padding: 2em 0 3em 0;
+  margin: 0 10%;
   justify-content: space-between;
   ul {
     list-style: none;
@@ -138,20 +144,12 @@ and (orientation : portrait) {
 
 // ANIMATIONS ////////////////////////////////////////
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 [ui-view].ng-enter {
   animation: fadeIn 0.5s;
@@ -172,7 +170,7 @@ and (orientation : portrait) {
 
 // PROJECTS PAGE //////////////////////////////////////
 .show-container {
-  // margin-top: 80px;
+  // margin-top: 180px;
   // max-height: 100%;
 }
 
@@ -198,7 +196,7 @@ and (orientation : portrait) {
   float: right;
   margin: 0;
   height: 70vh;
-  overflow: scroll;
+  // overflow: scroll;
   img {
     float: right;
     margin-right: 0;
@@ -247,7 +245,7 @@ and (orientation : portrait) {
   justify-content: space-between;
   flex-wrap: wrap;
   height: 75vh;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   div.indexview:nth-child(odd) {
     margin-right: 2em;
   }
@@ -374,7 +372,7 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   justify-content: space-between;
   flex-wrap: wrap;
   .riso-container {
-    width: 60%;
+    width: 70%;
     margin-right: 3em;
     h2 {
       font-family: 'AvenirLTStd-Black';

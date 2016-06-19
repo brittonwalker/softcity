@@ -18,7 +18,6 @@ html {
   background-size: 40px 40px; }
 
 body {
-  padding: 0 10%;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 100%);
   background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
@@ -34,10 +33,9 @@ main {
   justify-content: center;
   align-content: center;
   resize: vertical;
-  overflow: auto; }
-
-main div {
-  resize: vertical; }
+  position: absolute;
+  top: 190px;
+  margin: 0px 10%; }
 
 h1, h2, p {
   color: #56217c;
@@ -64,9 +62,12 @@ ng-md-icon:focus {
 
 nav {
   display: flex;
+  position: fixed;
+  width: 80%;
   align-items: center;
   list-style-type: none;
   padding: 2em 0 3em 0;
+  margin: 0 10%;
   justify-content: space-between; }
   nav ul {
     list-style: none;
@@ -152,8 +153,7 @@ nav {
   width: 50%;
   float: right;
   margin: 0;
-  height: 70vh;
-  overflow: scroll; }
+  height: 70vh; }
   .image-container img {
     float: right;
     margin-right: 0;
@@ -191,8 +191,7 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 75vh;
-  overflow-y: scroll; }
+  height: 75vh; }
   .indexcontainer div.indexview:nth-child(odd) {
     margin-right: 2em; }
 
@@ -329,7 +328,7 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap; }
   .about-container .riso-container {
-    width: 60%;
+    width: 70%;
     margin-right: 3em; }
     .about-container .riso-container h2 {
       font-family: 'AvenirLTStd-Black';

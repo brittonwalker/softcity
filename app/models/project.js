@@ -6,6 +6,8 @@ var ProjectSchema   = new Schema({
     about: String,
     author: String,
     specs: String,
+    price: Number,
+    link: String,
     img: []
 });
 

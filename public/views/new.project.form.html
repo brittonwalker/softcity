@@ -18,10 +18,19 @@
     <label>Specs</label>
     <input ng-model="formData.specs" type="text">
   </md-input-container>
+  <md-input-container class="md-icon-float md-block">
+    <label>Price</label>
+    <input ng-model="formData.price" type="text">
+  </md-input-container>
+  <md-input-container class="md-icon-float md-block">
+    <label>Link</label>
+    <input ng-model="formData.link" type="text">
+  </md-input-container>
   <md-input-container class="md-icon-float md-block" ng-repeat="img in formData.img track by $index">
     <label>Image Url</label>
     <input ng-model="formData.img[$index]" type="text">
   </md-input-container>
+
 
   <div layout-align="space-between none" layout="row">
     <ng-md-icon icon="add_circle" ng-click="addField()" size="40" style="fill: #56217c" type="button">Add Img Url Field</ng-md-icon>

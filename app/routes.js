@@ -18,7 +18,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/api/projects', authCheck, function(req, res) {
+  app.post('/api/projects', /*authCheck,*/ function(req, res) {
     var array = [];
     var images = req.body.img;
     Project.create({
@@ -26,6 +26,8 @@ module.exports = function(app) {
       about: req.body.about,
       author: req.body.author,
       specs: req.body.specs,
+      price: req.body.price,
+      link: req.body.link,
       img: array.concat(images)
     }, function(err, project) {
       if (err)
@@ -59,13 +61,15 @@ module.exports = function(app) {
       project.about = req.body.about;
       project.author = req.body.author;
       project.specs = req.body.specs;
+      project.price = req.body.price;
+      project.link = req.body.link;
       project.img = array.concat(images)
 
       project.save(function(err) {
         if (err)
           res.send(err)
 
-        res.json({ message: 'Project updated!'})
+        res.json({ message: 'Project updated!', project})
       });
     });
   });
