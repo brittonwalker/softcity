@@ -68,13 +68,13 @@ nav {
   margin: 0 100px;
   height: 130px;
   justify-content: space-between;
-  -webkit-transition: height 500ms ease-in-out;
-  -moz-transition: height 500ms ease-in-out;
-  -o-transition: height 500ms ease-in-out;
-  transition: height 500ms ease-in-out; }
+  -webkit-transition: height 300ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out;
+  -o-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out; }
   nav #logo {
     transform: scale(1);
-    -webkit-transition: transform 500ms ease-in-out; }
+    -webkit-transition: transform 250ms ease-in-out; }
   nav ul {
     list-style: none;
     display: inline-flex; }
@@ -83,6 +83,25 @@ nav {
       text-transform: uppercase; }
     nav ul li:last-child {
       padding-right: 0; }
+  @media (max-width: 480px) {
+    nav {
+      display: inline-block;
+      position: fixed;
+      background-color: white;
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+      nav #logo {
+        display: none; }
+      nav ul {
+        padding: 0;
+        margin: 0 auto; }
+        nav ul li {
+          display: inline;
+          padding: 20px 10px;
+          margin: 0; } }
 
 nav.fixie {
   position: fixed;
@@ -93,39 +112,16 @@ nav.fixie {
   margin: 0;
   padding: 0;
   padding-left: 100px;
-  -webkit-transition: height 500ms ease-in-out, background-color 100ms ease-in-out;
-  -moz-transition: height 500ms ease-in-out, background-color 100ms ease-in-out;
-  -o-transition: height 500ms ease-in-out, background-color 100ms ease-in-out;
-  transition: height 500ms ease-in-out, background-color 100ms ease-in-out; }
+  -webkit-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
+  -o-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
+  transition: height 300ms ease-in-out, background-color 300ms ease-in-out; }
   nav.fixie #logo {
     transform: scale(0);
-    -webkit-transition: transform 500ms ease-in-out; }
+    -webkit-transition: transform 250ms ease-in-out; }
   nav.fixie ul li:last-child {
     padding-right: 100px; }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
-  body {
-    padding: 0; }
-
-  .navbar {
-    display: none; }
-
-  nav {
-    display: flex;
-    padding-top: 0; }
-    nav ul {
-      flex-direction: column;
-      width: 100vw; }
-      nav ul li {
-        margin: 0;
-        margin-bottom: 5px; }
-        nav ul li a {
-          display: block; }
-      nav ul li:last-child {
-        margin: 0; }
-
-  .green {
-    display: none; } }
 .email {
   border-bottom: 3px solid #56217c;
   padding-bottom: 3px;
