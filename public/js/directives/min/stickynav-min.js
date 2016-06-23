@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("softCity").directive("stickyNav",function(){return{restrict:"AC",link:$(window).scroll(function(){$("nav").addClass("fixie"),$("main").css({"padding-top":"100px"}),0===$(this).scrollTop()&&($("nav").removeClass("fixie"),$("main").css({"padding-top":"30px"}))})}})}();
