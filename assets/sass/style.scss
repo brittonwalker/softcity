@@ -84,6 +84,7 @@ ng-md-icon:focus {
   background-color: #30f7ba;
   @media(max-width: 480px){
     display: none;
+    // visibility: hidden;
   }
 }
 
@@ -288,6 +289,7 @@ nav.fixie{
   margin-bottom: 100px;
   @media (max-width: 480px){
     margin-bottom: 30px;
+    line-height: normal;
   }
   p {
     font-family: AvenirLTStd-Black;
@@ -369,9 +371,6 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   }
 }
 .about-main-container {
-  @media(max-width: 480px){
-    // width: 100%;
-  }
   // margin-top: 3em;
   display: flex;
   flex-direction: column;
@@ -399,6 +398,9 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
     p {
       font-size: 1.2em;
       line-height: 2em;
+      @media(max-width: 480px){
+        line-height: 1.5em;
+      }
     }
   }
 }
@@ -426,6 +428,9 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   h1 {
       text-align: left;
       font-size: 2.5em;
+      @media(max-width: 480px){
+        font-size: 1.5em;
+      }
     a {
       line-height: 1.5em;
     }

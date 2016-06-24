@@ -14,14 +14,14 @@
                       isMobile = true;
                     }
 
-                    if($(this).scrollTop() >= 50 && isMobile === false){
+                    if($(this).scrollTop() >= 10 && isMobile === false){
                       $('nav').addClass('fixie');
-                      $('main').css({'padding-top' : '150px'});
+                      $('main').css({'padding-top' : '190px'});
                     }
 
                     if($(this).scrollTop() === 0 && isMobile === false){
                       $('nav').removeClass('fixie');
-                      $('main').css({'padding-top' : '50px'});
+                      $('main').css({'padding-top' : '70px'});
                     }
                 })
             };
