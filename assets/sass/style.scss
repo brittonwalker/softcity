@@ -41,12 +41,23 @@ main {
   justify-content: center;
   align-content: center;
   resize: vertical;
-  padding-top: 20px;
-  min-width: 670px;
-  // position: relative;
-  // top: 190px;
-  // overflow: auto;
+  padding-top: 70px;
   margin: 0px 100px 50px;
+  @media(max-width: 480px){
+    padding: 100px 25px 0;
+    margin: 0;
+    .about-main-container h1{
+      font-size: 18px;
+    }
+    .about-container div.riso-container{
+      margin: 0;
+      width: 100%;
+    }
+    .about-container .riso-container p{
+      font-size: 16px;
+      margin: 0;
+    }
+  }
 }
 main div {
   // resize: vertical;
@@ -71,6 +82,9 @@ ng-md-icon:focus {
   height: 100%;
   width: 1em;
   background-color: #30f7ba;
+  @media(max-width: 480px){
+    display: none;
+  }
 }
 
 // MENU //////////////////////////////////////////////
@@ -227,54 +241,54 @@ nav.fixie{
     margin-bottom: 0;
   }
 }
-@media only screen and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-  .show-container {
-    text-align: center;
-  }
-  #show-image {
-    width: auto;
-    height: auto;
-    // max-width: 100vw;
-  }
-  .description {
-    display: block;
-    width: 100%;
-    float: none;
-    padding: 0 5%;
-    text-align: justify;
-    h2 {
-      text-align: left;
-    }
-    p:first-of-type {
-      line-height: normal;
-      letter-spacing: normal;
-    }
-  }
-  .image-container {
-    display: block;
-    width: 100%;
-    float: none;
-  }
-}
+// @media only screen and (min-device-width : 375px)
+// and (max-device-width : 667px)
+// and (orientation : portrait) {
+//   .show-container {
+//     text-align: center;
+//   }
+//   #show-image {
+//     width: auto;
+//     height: auto;
+//     // max-width: 100vw;
+//   }
+//   .description {
+//     display: block;
+//     width: 100%;
+//     float: none;
+//     padding: 0 5%;
+//     text-align: justify;
+//     h2 {
+//       text-align: left;
+//     }
+//     p:first-of-type {
+//       line-height: normal;
+//       letter-spacing: normal;
+//     }
+//   }
+//   .image-container {
+//     display: block;
+//     width: 100%;
+//     float: none;
+//   }
+// }
 // INDEX PAGE //////////////////////////////////////
 .indexcontainer {
-  // margin-top: 80px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 75vh;
-  // overflow-y: scroll;
-  div.indexview:nth-child(odd) {
-    margin-right: 2em;
-  }
+  // div.indexview:nth-child(odd) {
+  //   margin-right: 2em;
+  // }
 }
 
 .indexview {
   text-align: center;
   line-height: 0;
-  margin-bottom: 2em;
+  margin-bottom: 100px;
+  @media (max-width: 480px){
+    margin-bottom: 30px;
+  }
   p {
     font-family: AvenirLTStd-Black;
     text-transform: uppercase;
@@ -288,38 +302,18 @@ and (orientation : portrait) {
     letter-spacing: 1px;
   }
 }
-
+.index-img{
+  width: 100%;
+}
 #image {
-  height: 300px;
-}
-@media only screen and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-  .indexcontainer {
-    display: block;
-    width: 100vw;
-    height: 100%;
-  }
-  .indexview {
+  max-width: 550px;
+  max-height: 520px;
+  @media (max-width: 480px){
     width: 100%;
-    display: block;
-    margin-bottom: 3em;
-    clear: both;
-    img#image {
-      width: auto;
-      height: auto;
-      max-width: 100vw;
-    }
-    h3 {
-      font-size: 8px;
-      font-size: 1em;
-    }
-    p {
-      font-size: .8em;
-    }
+    height: auto;
   }
-}
 
+}
 
 // SPLASH INTRO //////////////////////////////////////
 
@@ -375,6 +369,9 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   }
 }
 .about-main-container {
+  @media(max-width: 480px){
+    // width: 100%;
+  }
   // margin-top: 3em;
   display: flex;
   flex-direction: column;
@@ -421,66 +418,6 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
   }
 }
 
-@media only screen and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-  .about-main-container {
-    // margin-top: 2em;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    h1 {
-      word-spacing: .1em;
-      line-height: 1.5em;
-      text-align: justify;
-      font-size: 14px;
-      line-height: 2em;
-    }
-  }
-  .about-main-container{
-    width: 100vw;
-    padding: 0 10%;
-  }
-  .about-container {
-    display: block;
-    .riso-container {
-      width: 100%;
-      h2 {
-        font-family: 'AvenirLTStd-Black';
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-      p {
-        font-size: 14px;
-        line-height: 2em;
-      }
-    }
-  }
-  .color-container {
-    width: 100%;
-    h2 {
-      font-family: 'AvenirLTStd-Black';
-      font-size: 12px;
-      margin-bottom: 2em;
-      text-transform: uppercase;
-    }
-    .circle-container1 {
-      display: inline-flex;
-    }
-    .circle-container2 {
-      display: inline-flex;
-      margin-top: 1em;
-    }
-  }
-  .circle {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-  }
-}
-
-
 // CONTACT PAGE //////////////////////////////////////////////
 .contact-container {
   display: flex;
@@ -506,47 +443,4 @@ and (orientation : portrait) {
       margin-right: 1em;
     }
   }
-}
-
-@media only screen and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-  .contact {
-    margin-top: 100px;
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
-  }
-  .contact-container {
-    margin-top: 3em;
-    display: block;
-    padding: 0 10%;
-    margin: 0 auto;
-    h1 {
-        line-height: 1.5em;
-        text-align: inherit;
-        font-size: 100%;
-      span {
-        display: block;
-      }
-    }
-  }
-  .social-media-container {
-    margin-top: 2em;
-    padding: 0 10%;
-    display: flex;
-    position: static;
-    justify-content: space-between;
-    h2 {
-      // margin: 0 auto;
-      font-size: 18px;
-      a {
-        margin-right: 0;
-      }
-      a:first-of-type {
-        margin-right: 1em;
-      }
-    }
-  }
-
 }

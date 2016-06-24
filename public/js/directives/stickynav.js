@@ -16,7 +16,7 @@
 
                     if($(this).scrollTop() >= 50 && isMobile === false){
                       $('nav').addClass('fixie');
-                      $('main').css({'padding-top' : '100px'});
+                      $('main').css({'padding-top' : '150px'});
                     }
 
                     if($(this).scrollTop() === 0 && isMobile === false){
