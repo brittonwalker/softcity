@@ -1,7 +1,7 @@
 <div class="indexcontainer">
   <div ng-repeat="item in index.mydata" class="indexview">
     <h3 class="title"><a data-ui-sref="projectShow({id: item._id})">{{ item.title }}</a></h3>
-    <p>By {{ item.author }}</p>
+    <p class="author">By {{ item.author }}</p>
     <div class="index-img">
     <a data-ui-sref="projectShow({id: item._id})"><img src='{{ item.img[0] }}' id="image"></a>
     </div>
