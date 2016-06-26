@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box; }
 
-h1 {
+.big-text {
   font-size: 52px;
   line-height: 64px;
   word-spacing: 10px; }
 
-p {
+.medium-text {
   font-size: 30px;
   line-height: 42px; }
 
@@ -31,6 +31,8 @@ html {
   background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
+  background-position: left;
+  background-position: 30px 3px;
   background-size: 40px 40px; }
 
 body {
@@ -40,6 +42,8 @@ body {
   background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
+  background-position: left;
+  background-position: 30px 3px;
   background-size: 40px 40px;
   margin: 0; }
 
@@ -50,25 +54,52 @@ main {
   align-content: center;
   resize: vertical;
   padding-top: 70px;
-  margin: 0 150px 50px; }
-  @media (max-width: 768px) {
+  margin: 0 0 50px 150px;
+  max-width: 1150px; }
+  @media (max-width: 1024px) {
     main {
       margin: 0 100px 50px; }
-      main h1 {
+      main .about-container .riso-container {
+        width: 100%;
+        margin-bottom: 20px;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out; } }
+  @media (max-width: 768px) {
+    main {
+      margin: 0 100px 50px;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out; }
+      main h1.big-text {
         font-size: 40px;
         line-height: 50px;
-        margin-bottom: 80px; }
+        margin-bottom: 50px;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out; }
       main .about-container {
         width: 100%; }
         main .about-container .riso-container {
           width: 100%;
-          margin-bottom: 20px; } }
+          margin-bottom: 20px;
+          -webkit-transition: all 500ms ease-in-out;
+          -moz-transition: all 500ms ease-in-out;
+          -o-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out; } }
   @media (max-width: 480px) {
     main {
       padding: 100px 25px 0;
       margin: 0; }
       main .about-main-container h1 {
-        font-size: 18px; }
+        font-size: 18px;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out; }
       main .about-container div.riso-container {
         margin: 0;
         width: 100%; }
@@ -114,17 +145,17 @@ nav {
   padding-top: 20px;
   margin: 0 150px;
   height: 130px;
+  background-color: transparent;
   justify-content: space-between;
-  -webkit-transition: height 300ms ease-in-out;
-  -moz-transition: height 300ms ease-in-out;
-  -o-transition: height 300ms ease-in-out;
-  transition: height 300ms ease-in-out; }
-  @media (max-width: 768px) {
+  -webkit-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
+  -o-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
+  transition: height 300ms ease-in-out, background-color 200ms ease-in-out; }
+  @media (max-width: 1024px) {
     nav {
       margin: 0 100px; } }
   nav #logo {
-    transform: scale(1);
-    -webkit-transition: transform 250ms ease-in-out; }
+    display: block; }
   nav ul {
     list-style: none;
     display: inline-flex; }
@@ -153,7 +184,7 @@ nav {
 
 nav.fixie {
   position: fixed;
-  background-color: white;
+  background-color: #56217c;
   padding-right: 100px;
   width: 100%;
   height: 50px;
@@ -164,8 +195,9 @@ nav.fixie {
   -o-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   transition: height 300ms ease-in-out, background-color 300ms ease-in-out; }
   nav.fixie #logo {
-    transform: scale(0);
-    -webkit-transition: transform 250ms ease-in-out; }
+    display: none; }
+  nav.fixie ul a {
+    color: white; }
   nav.fixie ul li:last-child {
     padding-right: 100px; }
 
@@ -237,6 +269,9 @@ button {
   float: right;
   margin: 0;
   overflow: auto; }
+  @media (max-width: 1024) {
+    .image-container {
+      min-width: 410px; } }
   @media (max-width: 786px) {
     .image-container {
       width: 100%;
@@ -422,6 +457,11 @@ button {
       line-height: 1.5em; }
     .contact-container h1 span {
       display: block; }
+  @media (max-width: 1024px) {
+    .contact-container h1 {
+      font-size: 40px;
+      line-height: 50px;
+      transition: all 500ms linear; } }
 
 .social-media-container {
   margin-top: 200px; }
