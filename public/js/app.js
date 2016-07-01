@@ -43,7 +43,7 @@
 
     jwtInterceptorProvider.tokenGetter = function(store) {
       return store.get('token');
-  }
+  };
 
   $httpProvider.interceptors.push('jwtInterceptor');
   }).run(function($rootScope, $state, auth, store, jwtHelper, $location) {
@@ -52,6 +52,7 @@
     // Get the JWT that is saved in local storage
     // and if it is there, check whether it is expired.
     // If it isn't, set the user's auth state
+    // $('.green').addClass('slide-out');
     var token = store.get('token');
     if (token) {
       if (!jwtHelper.isTokenExpired(token)) {
@@ -107,7 +108,7 @@
           templateUrl: '../views/projects.show.html',
           controller: 'showController',
           controllerAs: 'show'
-        })
-  };
+        });
+  }
 
-})()
+})();

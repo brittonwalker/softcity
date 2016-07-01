@@ -1,0 +1,1 @@
+"use strict";!function(){function t(t,o,n){o.currentPath=n.path(),o.$state=t}angular.module("softCity").controller("navController",["$state","$scope","$location",t])}();

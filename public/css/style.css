@@ -53,59 +53,24 @@ main {
   justify-content: center;
   align-content: center;
   resize: vertical;
-  padding-top: 70px;
-  margin: 0 0 50px 150px;
-  max-width: 1150px; }
+  padding: 200px 0 0 150px;
+  margin: 0 100px 50px 0;
+  max-width: 1300px;
+  width: 100%; }
   @media (max-width: 1024px) {
     main {
-      margin: 0 100px 50px; }
-      main .about-container .riso-container {
-        width: 100%;
-        margin-bottom: 20px;
-        -webkit-transition: all 500ms ease-in-out;
-        -moz-transition: all 500ms ease-in-out;
-        -o-transition: all 500ms ease-in-out;
-        transition: all 500ms ease-in-out; } }
+      padding-left: 100px; } }
   @media (max-width: 768px) {
     main {
-      margin: 0 100px 50px;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out; }
-      main h1.big-text {
+      padding: 200px 100px 0; }
+      main .big-text {
         font-size: 40px;
         line-height: 50px;
-        margin-bottom: 50px;
-        -webkit-transition: all 500ms ease-in-out;
-        -moz-transition: all 500ms ease-in-out;
-        -o-transition: all 500ms ease-in-out;
-        transition: all 500ms ease-in-out; }
-      main .about-container {
-        width: 100%; }
-        main .about-container .riso-container {
-          width: 100%;
-          margin-bottom: 20px;
-          -webkit-transition: all 500ms ease-in-out;
-          -moz-transition: all 500ms ease-in-out;
-          -o-transition: all 500ms ease-in-out;
-          transition: all 500ms ease-in-out; } }
+        margin-bottom: 50px; } }
   @media (max-width: 480px) {
     main {
       padding: 100px 25px 0;
-      margin: 0; }
-      main .about-main-container h1 {
-        font-size: 18px;
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out; }
-      main .about-container div.riso-container {
-        margin: 0;
-        width: 100%; }
-      main .about-container .riso-container p {
-        font-size: 16px;
-        margin: 0; } }
+      margin: 0; } }
 
 h1,
 h2,
@@ -134,26 +99,39 @@ ng-md-icon:focus {
     .green {
       display: none; } }
 
+div.green.slide-out {
+  -webkit-animation: 1s ease-in-out 0s 2 alternate slide-out;
+  -moz-animation: 1s ease-in-out 0s 2 alternate slide-out;
+  -o-animation: 1s ease-in-out 0s 2 alternate slide-out;
+  animation: 1s ease-in-out 0s 2 alternate slide-out; }
+
+@keyframes slide-out {
+  from {
+    width: 1em; }
+  to {
+    width: 100%; } }
 .menu {
   font-family: 'AvenirLTStd-Black';
   color: #56217c; }
 
 nav {
+  width: 100%; }
+
+nav {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding-top: 20px;
-  margin: 0 150px;
+  padding: 50px 0 0 150px;
+  max-width: 1300px;
+  width: 100%;
   height: 130px;
+  position: fixed;
   background-color: transparent;
   justify-content: space-between;
   -webkit-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
   -moz-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
   -o-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
   transition: height 300ms ease-in-out, background-color 200ms ease-in-out; }
-  @media (max-width: 1024px) {
-    nav {
-      margin: 0 100px; } }
   nav #logo {
     display: block; }
   nav ul {
@@ -162,11 +140,16 @@ nav {
     nav ul li {
       padding-left: 45px;
       text-transform: uppercase; }
+  @media (max-width: 1024px) {
+    nav {
+      padding-left: 100px; } }
+  @media (max-width: 768px) {
+    nav {
+      padding: 50px;
+      width: 100%; } }
   @media (max-width: 480px) {
     nav {
-      display: inline-block;
-      position: fixed;
-      background-color: white;
+      background-color: #56217c;
       width: 100%;
       height: 60px;
       margin: 0;
@@ -177,19 +160,21 @@ nav {
       nav ul {
         padding: 0;
         margin: 0 auto; }
+        nav ul a:active,
+        nav ul a:hover,
+        nav ul a:link,
+        nav ul a:visited,
+        nav ul a {
+          color: white; }
         nav ul li {
           display: inline;
           padding: 20px 10px;
           margin: 0; } }
 
 nav.fixie {
-  position: fixed;
   background-color: #56217c;
-  padding-right: 100px;
-  width: 100%;
   height: 50px;
-  margin: 0;
-  padding: 0 0 0 100px;
+  padding: 0 0 0 256px;
   -webkit-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   -moz-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   -o-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
@@ -198,8 +183,6 @@ nav.fixie {
     display: none; }
   nav.fixie ul a {
     color: white; }
-  nav.fixie ul li:last-child {
-    padding-right: 100px; }
 
 .email {
   border-bottom: 3px solid #56217c;
@@ -316,7 +299,7 @@ button {
 
 .details {
   font-size: 16px;
-  line-height: 36px;
+  line-height: 28px;
   margin: 15px 0; }
 
 .index-img {
@@ -416,6 +399,11 @@ button {
   .about-main-container h1 {
     text-align: left;
     margin: 0 0 100px; }
+  @media (max-width: 480px) {
+    .about-main-container h1 {
+      font-size: 33px;
+      line-height: 40px;
+      margin-bottom: 50px; } }
 
 .about-container {
   display: flex;
@@ -432,6 +420,15 @@ button {
       @media (max-width: 480px) {
         .about-container .riso-container p {
           line-height: 1.5em; } }
+  @media (max-width: 768px) {
+    .about-container .riso-container {
+      width: 100%;
+      margin-bottom: 50px; } }
+  @media (max-width: 480px) {
+    .about-container .riso-container {
+      width: 100%; }
+      .about-container .riso-container p {
+        font-size: 22px; } }
 
 .color-container h3 {
   font-family: 'AvenirLTStd-Black';
@@ -450,9 +447,6 @@ button {
   justify-content: flex-end; }
   .contact-container h1 {
     text-align: left; }
-    @media (max-width: 480px) {
-      .contact-container h1 {
-        font-size: 1.5em; } }
     .contact-container h1 a {
       line-height: 1.5em; }
     .contact-container h1 span {
@@ -462,6 +456,10 @@ button {
       font-size: 40px;
       line-height: 50px;
       transition: all 500ms linear; } }
+  @media (max-width: 480px) {
+    .contact-container h1 {
+      font-size: 24px;
+      line-height: 27px; } }
 
 .social-media-container {
   margin-top: 200px; }
@@ -471,3 +469,9 @@ button {
     font-size: 28px; }
     .social-media-container h2 a {
       margin-right: 1em; }
+  @media (max-width: 480px) {
+    .social-media-container {
+      margin-top: 50px; }
+      .social-media-container h2 {
+        font-size: 24px;
+        line-height: 27px; } }

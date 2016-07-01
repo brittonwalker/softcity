@@ -14,13 +14,14 @@ $textColor: #56217c;
     background-position: 30px 3px;
     background-size: 40px 40px;
 }
-
-.big-text{
-  font-size: 52px;
-  line-height: 64px;
-  word-spacing: 10px;
+.big-text {
+    font-size: 52px;
+    line-height: 64px;
+    word-spacing: 10px;
+    // @media (max-width: 480px){
+    //   font-size: 12px;
+    // }
 }
-
 .medium-text {
     font-size: 30px;
     line-height: 42px;
@@ -57,69 +58,24 @@ main {
     justify-content: center;
     align-content: center;
     resize: vertical;
-    padding-top: 70px;
-    margin: 0 0 50px 150px;
-    max-width: 1150px;
-    @media(max-width: 1024px){
-      margin: 0 100px 50px;
-      .about-container{
-
-      .riso-container {
-          width: 100%;
-          margin-bottom: 20px;
-          -webkit-transition: all 500ms ease-in-out;
-          -moz-transition: all 500ms ease-in-out;
-          -o-transition: all 500ms ease-in-out;
-          transition: all 500ms ease-in-out;
-      }
-      }
-
+    padding: 200px 0 0 150px;
+    margin: 0 100px 50px 0;
+    max-width: 1300px;
+    width: 100%;
+    @media(max-width: 1024px) {
+        padding-left: 100px;
     }
     @media(max-width: 768px) {
-        margin: 0 100px 50px;
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        h1.big-text {
+        padding: 200px 100px 0;
+        .big-text {
             font-size: 40px;
             line-height: 50px;
             margin-bottom: 50px;
-            -webkit-transition: all 500ms ease-in-out;
-            -moz-transition: all 500ms ease-in-out;
-            -o-transition: all 500ms ease-in-out;
-            transition: all 500ms ease-in-out;
-        }
-        .about-container {
-            width: 100%;
-            .riso-container {
-                width: 100%;
-                margin-bottom: 20px;
-                -webkit-transition: all 500ms ease-in-out;
-                -moz-transition: all 500ms ease-in-out;
-                -o-transition: all 500ms ease-in-out;
-                transition: all 500ms ease-in-out;
-            }
         }
     }
     @media(max-width: 480px) {
         padding: 100px 25px 0;
         margin: 0;
-        .about-main-container h1 {
-            font-size: 18px;
-            -webkit-transition: all 300ms ease-in-out;
-            -moz-transition: all 300ms ease-in-out;
-            -o-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out;
-        }
-        .about-container div.riso-container {
-            margin: 0;
-            width: 100%;
-        }
-        .about-container .riso-container p {
-            font-size: 16px;
-            margin: 0;
-        }
     }
 }
 h1,
@@ -150,27 +106,48 @@ ng-md-icon:focus {
         // visibility: hidden;
     }
 }
+
+div.green.slide-out{
+  // width: 100%;
+  -webkit-animation: 1s ease-in-out 0s 2 alternate slide-out;
+     -moz-animation: 1s ease-in-out 0s 2 alternate slide-out;
+       -o-animation: 1s ease-in-out 0s 2 alternate slide-out;
+          animation: 1s ease-in-out 0s 2 alternate slide-out;
+}
+
+@keyframes slide-out {
+  from {
+    width: 1em;
+  }
+  to {
+    width: 100%;
+  }
+}
 // MENU //////////////////////////////////////////////
 .menu {
     font-family: 'AvenirLTStd-Black';
     color: $textColor;
 }
+
+nav{
+  width: 100%;
+}
+
 nav {
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding-top: 20px;
-    margin: 0 150px;
+    padding: 50px 0 0 150px;
+    max-width: 1300px;
+    width: 100%;
     height: 130px;
+    position: fixed;
     background-color: transparent;
     justify-content: space-between;
     -webkit-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
     -moz-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
     -o-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
     transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
-    @media(max-width: 1024px) {
-        margin: 0 100px;
-    }
     #logo {
         display: block;
     }
@@ -182,10 +159,16 @@ nav {
             text-transform: uppercase;
         }
     }
+    @media(max-width: 1024px) {
+        padding-left: 100px;
+    }
+    @media(max-width: 768px){
+      padding: 50px;
+      width: 100%;
+    }
+
     @media (max-width: 480px) {
-        display: inline-block;
-        position: fixed;
-        background-color: white;
+        background-color: $textColor;
         width: 100%;
         height: 60px;
         margin: 0;
@@ -197,6 +180,13 @@ nav {
         ul {
             padding: 0;
             margin: 0 auto;
+            a:active,
+            a:hover,
+            a:link,
+            a:visited,
+            a{
+              color: white;
+            }
             li {
                 display: inline;
                 padding: 20px 10px;
@@ -206,28 +196,25 @@ nav {
     }
 }
 nav.fixie {
-    position: fixed;
     background-color: $textColor;
-    padding-right: 100px;
-    width: 100%;
+    // padding-right: 100px;
+    // width: 100%;
     height: 50px;
-    margin: 0;
-    padding: 0 0 0 100px;
+    // margin: 0;
+    padding: 0 0 0 256px;
     -webkit-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
     -moz-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
     -o-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
     transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
     #logo {
-        // transform: scale(0);
         display: none;
-        // -webkit-transition: transform 250ms ease-in-out;
     }
     ul {
-      a{
-        color: white;
-      }
+        a {
+            color: white;
+        }
         li:last-child {
-            padding-right: 100px;
+            // padding-right: 100px;
         }
     }
 }
@@ -286,8 +273,8 @@ button {
     float: left;
     padding-right: 2em;
     max-height: 50%;
-    @media(max-width: 786px){
-      width: 100%;
+    @media(max-width: 786px) {
+        width: 100%;
     }
     @media(max-width: 480px) {
         width: 100%;
@@ -314,8 +301,8 @@ button {
     margin: 0;
     overflow: auto;
     // min-width: 410px;
-    @media(max-width: 1024){
-      min-width: 410px;
+    @media(max-width: 1024) {
+        min-width: 410px;
     }
     @media(max-width: 786px) {
         width: 100%;
@@ -402,7 +389,7 @@ button {
 }
 .details {
     font-size: 16px;
-    line-height: 36px;
+    line-height: 28px;
     margin: 15px 0;
 }
 .index-img {
@@ -475,13 +462,20 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
         text-align: left;
         margin: 0 0 100px;
     }
+    @media (max-width: 480px){
+      h1{
+        font-size: 33px;
+        line-height: 40px;
+        margin-bottom: 50px;
+      }
+    }
 }
 .about-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     .riso-container {
-      // min-width: 650px;
+        // min-width: 660px;
         width: 57%;
         h3 {
             font-family: 'AvenirLTStd-Black';
@@ -494,6 +488,20 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
                 line-height: 1.5em;
             }
         }
+    }
+    @media (max-width: 768px){
+      .riso-container{
+        width: 100%;
+        margin-bottom: 50px;
+      }
+    }
+    @media (max-width: 480px){
+      .riso-container{
+        width: 100%;
+        p{
+          font-size: 22px;
+        }
+      }
     }
 }
 .color-container {
@@ -518,9 +526,6 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
     justify-content: flex-end;
     h1 {
         text-align: left;
-        @media(max-width: 480px) {
-            font-size: 1.5em;
-        }
         a {
             line-height: 1.5em;
         }
@@ -528,12 +533,18 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
             display: block;
         }
     }
-    @media(max-width: 1024px){
-      h1 {
-        font-size: 40px;
-        line-height: 50px;
-        transition: all 500ms linear;
-      }
+    @media(max-width: 1024px) {
+        h1 {
+            font-size: 40px;
+            line-height: 50px;
+            transition: all 500ms linear;
+        }
+    }
+    @media(max-width: 480px) {
+        h1 {
+          font-size: 24px;
+          line-height: 27px;
+        }
     }
 }
 .social-media-container {
@@ -546,4 +557,12 @@ $colors-list: #694089 #f62a2a #28bf2b #2a53f6 #ed2deb #ed862d #222222 #c0b48c #9
             margin-right: 1em;
         }
     }
+    @media (max-width: 480px){
+      margin-top: 50px;
+      h2{
+        font-size: 24px;
+        line-height: 27px;
+      }
+    }
+
 }
