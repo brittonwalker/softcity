@@ -100,10 +100,10 @@ ng-md-icon:focus {
       display: none; } }
 
 div.green.slide-out {
-  -webkit-animation: 1s ease-in-out 0s 2 alternate slide-out;
-  -moz-animation: 1s ease-in-out 0s 2 alternate slide-out;
-  -o-animation: 1s ease-in-out 0s 2 alternate slide-out;
-  animation: 1s ease-in-out 0s 2 alternate slide-out; }
+  -webkit-animation: .6s ease-out 0s 2 alternate slide-out;
+  -moz-animation: .6s ease-out 0s 2 alternate slide-out;
+  -o-animation: .6s ease-out 0s 2 alternate slide-out;
+  animation: .6s ease-out 0s 2 alternate slide-out; }
 
 @keyframes slide-out {
   from {
@@ -203,10 +203,10 @@ nav.fixie {
   to {
     opacity: 0; } }
 [ui-view].ng-enter {
-  animation: fadeIn 0.5s; }
+  animation: fadeIn 2s; }
 
 [ui-view].ng-enter-active {
-  animation: fadeIn 0.5s; }
+  animation: fadeIn 2s; }
 
 [ui-view].ng-enter > div.splash {
   animation: fadeIn 0s; }

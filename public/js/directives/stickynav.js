@@ -25,7 +25,10 @@
                     }
                 }),
                 link: function(){
-
+                  $('.links').click(function(){
+                    $('.green').addClass('slide-out').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                    $('.green').removeClass('slide-out') });
+                  })
                   // var $w = $('main').width();
                   // $('nav').width($w);
 
