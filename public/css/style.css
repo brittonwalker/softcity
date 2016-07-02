@@ -53,7 +53,7 @@ main {
   justify-content: center;
   align-content: center;
   resize: vertical;
-  padding: 200px 0 0 150px;
+  padding: 200px 0 0 100px;
   margin: 0 100px 50px 0;
   max-width: 1300px;
   width: 100%; }
@@ -114,75 +114,80 @@ div.green.slide-out {
   font-family: 'AvenirLTStd-Black';
   color: #56217c; }
 
-nav {
-  width: 100%; }
+nav:focus {
+  outline: none; }
 
-nav {
+.nav-container {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 50px 0 0 150px;
+  padding: 50px 0 0 100px;
   max-width: 1300px;
   width: 100%;
   height: 130px;
   position: fixed;
   background-color: transparent;
   justify-content: space-between;
-  -webkit-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
-  -moz-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
-  -o-transition: height 300ms ease-in-out, background-color 200ms ease-in-out;
-  transition: height 300ms ease-in-out, background-color 200ms ease-in-out; }
-  nav #logo {
+  -webkit-transition: height 300ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out;
+  -o-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out; }
+  .nav-container #logo {
     display: block; }
-  nav ul {
+  .nav-container ul {
     list-style: none;
     display: inline-flex; }
-    nav ul li {
+    .nav-container ul li {
       padding-left: 45px;
       text-transform: uppercase; }
   @media (max-width: 1024px) {
-    nav {
+    .nav-container {
       padding-left: 100px; } }
   @media (max-width: 768px) {
-    nav {
+    .nav-container {
       padding: 50px;
       width: 100%; } }
   @media (max-width: 480px) {
-    nav {
+    .nav-container {
       background-color: #56217c;
       width: 100%;
       height: 60px;
       margin: 0;
       padding: 0;
       text-align: center; }
-      nav #logo {
+      .nav-container #logo {
         display: none; }
-      nav ul {
+      .nav-container ul {
         padding: 0;
         margin: 0 auto; }
-        nav ul a:active,
-        nav ul a:hover,
-        nav ul a:link,
-        nav ul a:visited,
-        nav ul a {
+        .nav-container ul a:active,
+        .nav-container ul a:hover,
+        .nav-container ul a:link,
+        .nav-container ul a:visited,
+        .nav-container ul a {
           color: white; }
-        nav ul li {
+        .nav-container ul li {
           display: inline;
           padding: 20px 10px;
           margin: 0; } }
 
+.nav-container.fixie {
+  height: 50px;
+  padding: 0 0 0 256px; }
+  .nav-container.fixie #logo {
+    display: none; }
+  .nav-container.fixie ul a {
+    color: white; }
+
 nav.fixie {
   background-color: #56217c;
+  width: 100%;
+  position: fixed;
   height: 50px;
-  padding: 0 0 0 256px;
   -webkit-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   -moz-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   -o-transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   transition: height 300ms ease-in-out, background-color 300ms ease-in-out; }
-  nav.fixie #logo {
-    display: none; }
-  nav.fixie ul a {
-    color: white; }
 
 .email {
   border-bottom: 3px solid #56217c;
@@ -203,10 +208,10 @@ nav.fixie {
   to {
     opacity: 0; } }
 [ui-view].ng-enter {
-  animation: fadeIn 2s; }
+  animation: fadeIn .5s; }
 
 [ui-view].ng-enter-active {
-  animation: fadeIn 2s; }
+  animation: fadeIn .5s; }
 
 [ui-view].ng-enter > div.splash {
   animation: fadeIn 0s; }

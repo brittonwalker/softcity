@@ -15,25 +15,24 @@
                     }
 
                     if($(this).scrollTop() >= 10 && isMobile === false){
-                      $('nav').addClass('fixie');
+                      $('nav, .nav-container' ).addClass('fixie');
                       // $('main').css({'padding-top' : '190px'});
                     }
 
                     if($(this).scrollTop() === 0 && isMobile === false){
-                      $('nav').removeClass('fixie');
+                      $('nav, .nav-container' ).removeClass('fixie');
                       // $('main').css({'padding-top' : '70px'});
                     }
                 }),
                 link: function(){
                   $('.links').click(function(){
                     $('.green').addClass('slide-out').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-                    $('.green').removeClass('slide-out') });
-                  })
+                    $('.green').removeClass('slide-out'); });
+                  });
                   // var $w = $('main').width();
                   // $('nav').width($w);
 
                   $(window).resize(function(){
-                    console.log('hey girl');
                     // $w = $('main').width();
                     // $('nav').width($w);
                   });

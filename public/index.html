@@ -13,6 +13,7 @@
 <body ng-app="softCity">
     <!-- <sticky-nav data-sticky-nav></sticky-nav> -->
     <nav ng-controller="navController" data-sticky-nav ng-click="moveBar()">
+            <div class="nav-container">
             <div class="navbar">
                 <a ui-sref="home"><img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png"></a>
             </div>
@@ -31,6 +32,7 @@
                     <a class="links" ui-sref-active="active" ui-sref="store">Store</a>
                 </li>
             </ul>
+            </div>
     </nav>
 
     <main>
