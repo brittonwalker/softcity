@@ -17,7 +17,6 @@
         $http.get('https://soft-city.herokuapp.com/api/projects')
         .then(function(res) {
           vm.mydata = res.data;
-          console.log(vm.mydata)
         })
       }
 
