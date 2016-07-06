@@ -1,0 +1,1 @@
+!function(){function n(){this.helloWorld=function(){$(".green").addClass("slide-out").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){$(".green").removeClass("slide-out")})}}angular.module("softCity").service("greenBar",[n])}();

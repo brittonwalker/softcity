@@ -8,10 +8,12 @@
         '$http',
         '$stateParams',
         'auth',
+        '$timeout',
+        'greenBar',
         ShowControllerFunction
       ]);
 
-    function ShowControllerFunction($scope, $http, $stateParams, auth) {
+    function ShowControllerFunction($scope, $http, $stateParams, auth, $timeout, greenBar) {
 
       var id = $stateParams.id;
       $scope.url = 'https://soft-city.herokuapp.com/api/projects/' + id;
@@ -22,9 +24,12 @@
       var getProject = function() {
         $http.get($scope.url)
         .then(function(res) {
-          vm.mydata = res.data;
-          console.log(vm.mydata)
-        })
+          greenBar.helloWorld();
+          $timeout(function(){
+            vm.mydata = res.data;
+          }, 500);
+
+        });
       };
 
       getProject();
@@ -32,8 +37,6 @@
       $scope.auth = auth;
 
       $scope.updateProject = function() {
-        console.log(vm.mydata)
-        // console.log(show.mydata)
         $http({
             method: 'PUT',
             url: $scope.url,
@@ -45,16 +48,16 @@
           .success(function(data) {
             console.log(data);
             getProject();
-          })
+          });
       };
 
       $scope.removeField = function(){
         vm.mydata.img.pop();
-      }
+      };
 
       $scope.addField = function(){
         vm.mydata.img.push('');
-      }
+      };
 
       }
     }());

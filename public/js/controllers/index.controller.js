@@ -8,15 +8,20 @@
         '$http',
         '$stateParams',
         'auth',
+        'greenBar',
+        '$timeout',
         IndexControllerFunction
       ]);
 
-    function IndexControllerFunction($scope, $http, $stateParams, auth) {
+    function IndexControllerFunction($scope, $http, $stateParams, auth, greenBar, $timeout) {
 
       var getProjects = function() {
         $http.get('https://soft-city.herokuapp.com/api/projects')
         .then(function(res) {
-          vm.mydata = res.data;
+          greenBar.helloWorld();
+          $timeout(function(){
+            vm.mydata = res.data;
+          }, 500)
         })
       }
 

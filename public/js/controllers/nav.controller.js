@@ -16,12 +16,10 @@
 
       $scope.$state = $state;
 
-      // $scope.moveBar = function(){
-      //   $('.links').click(function(){
-      //     $('.green').width('100px');
-      //     console.log('hey ur in the green bar');
-      //   });
-      // };
+      $scope.moveBar = function(){
+        $('.green').addClass('slide-out').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+        $('.green').removeClass('slide-out'); });
+      };
 
       }
     }());

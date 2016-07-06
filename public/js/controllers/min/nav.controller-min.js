@@ -1,1 +1,1 @@
-"use strict";!function(){function t(t,o,n){o.currentPath=n.path(),o.$state=t}angular.module("softCity").controller("navController",["$state","$scope","$location",t])}();
+"use strict";!function(){function n(n,t,o){t.currentPath=o.path(),t.$state=n,t.moveBar=function(){$(".green").addClass("slide-out").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){$(".green").removeClass("slide-out")})}}angular.module("softCity").controller("navController",["$state","$scope","$location",n])}();
