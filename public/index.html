@@ -12,7 +12,7 @@
 
 <body ng-app="softCity">
     <!-- <sticky-nav data-sticky-nav></sticky-nav> -->
-    <nav ng-controller="navController" data-sticky-nav ng-click="moveBar()">
+    <nav ng-controller="navController" data-sticky-nav>
             <div class="nav-container">
             <div class="navbar">
                 <a ui-sref="home"><img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png"></a>
@@ -23,13 +23,13 @@
                     <a class="links" ui-sref-active="active" ui-sref="projects">Projects</a>
                 </li>
                 <li class="menu">
-                    <a class="links" ui-sref-active="active" ui-sref="about">About</a>
+                    <a class="links" ui-sref-active="active" ui-sref="about" ng-click="moveBar()">About</a>
                 </li>
                 <li class="menu">
-                    <a class="links" ui-sref-active="active" ui-sref="contact">Contact</a>
+                    <a class="links" ui-sref-active="active" ui-sref="contact" ng-click="moveBar()">Contact</a>
                 </li>
                 <li class="menu">
-                    <a class="links" ui-sref-active="active" ui-sref="store">Store</a>
+                    <a class="links" ui-sref-active="active" ui-sref="store" ng-click="moveBar()">Store</a>
                 </li>
             </ul>
             </div>
@@ -69,10 +69,12 @@
 <script src="/js/controllers/index.controller.js"></script>
 <script src="/js/controllers/show.controller.js"></script>
 <script src="/js/controllers/intro.controller.js"></script>
+<script src="/js/controllers/about.controller.js"></script>
 <script src="/js/controllers/new.project.controller.js"></script>
 <script src="/js/controllers/nav.controller.js"></script>
 <script src="/js/controllers/profile.ctr.js"></script>
 <script src="/js/directives/toolbar.js"></script>
 <script src="/js/directives/stickynav.js"></script>
+<script src="/js/services/greenbar.service.js"></script>
 
 </html>

@@ -21,7 +21,7 @@
           greenBar.helloWorld();
           $timeout(function(){
             vm.mydata = res.data;
-          }, 500)
+          }, 500);
         })
       }
 
@@ -30,7 +30,6 @@
       $scope.deleteProject = function(id) {
         $http.delete('https://soft-city.herokuapp.com/api/projects/' + id)
         .then(function(res) {
-          console.log(res);
           getProjects();
         });
       };

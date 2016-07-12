@@ -46,7 +46,7 @@
   };
 
   $httpProvider.interceptors.push('jwtInterceptor');
-  }).run(function($rootScope, $state, auth, store, jwtHelper, $location) {
+  }).run(function($rootScope, $state, auth, store, jwtHelper) {
 
   $rootScope.$on('$locationChangeStart', function() {
     // Get the JWT that is saved in local storage
@@ -93,7 +93,8 @@
 
         .state('about', {
           url: '/about',
-          templateUrl: '../views/partial-about.html'
+          templateUrl: '../views/partial-about.html',
+          controller: 'aboutController'
         })
 
         .state('projects', {

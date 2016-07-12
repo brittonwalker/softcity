@@ -208,10 +208,16 @@ nav.fixie {
   to {
     opacity: 0; } }
 [ui-view].ng-enter {
-  animation: fadeIn .5s; }
+  animation: fadeIn 1s; }
+
+[ui-view].ng-leave-active {
+  animation: fadeOut 1s; }
+
+[ui-view].ng-leave-active {
+  animation: fadeOut 1s; }
 
 [ui-view].ng-enter-active {
-  animation: fadeIn .5s; }
+  animation: fadeIn 1s; }
 
 [ui-view].ng-enter > div.splash {
   animation: fadeIn 0s; }
