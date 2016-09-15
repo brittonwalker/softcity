@@ -355,6 +355,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/public\/js\/services\/min\/projects.service-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/js\/services\/min\/projects.service-min.js",
+		"outputAbbreviatedPath": "\/public\/js\/services\/min\/min\/projects.service-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/public\/js\/services\/projects.service.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/js\/services\/projects.service.js",
+		"outputAbbreviatedPath": "\/public\/js\/services\/min\/projects.service-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/public\/views\/home.tpl.html": {
 		"fileType": 8192,
 		"ignore": 0,

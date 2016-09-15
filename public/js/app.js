@@ -65,11 +65,14 @@
       // Otherwise, redirect to the home route
       // $location.path('/home');
     }
-  });
+  })
+
 
   });
 
-  function RouterFunction($stateProvider, $urlRouterProvider){
+  // };
+
+  function RouterFunction($stateProvider, $urlRouterProvider, $scope){
 
     $urlRouterProvider.otherwise('/');
 

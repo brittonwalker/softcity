@@ -1,1 +1,1 @@
-"use strict";!function(){function o(o,t,e){e.helloWorld(),console.log("hey from the about controller"),o.$on("$viewContentLoading",function(o){e.helloWorld()})}angular.module("softCity").controller("aboutController",["$scope","$timeout","greenBar",o])}();
+"use strict";!function(){function o(o,t,e){}angular.module("softCity").controller("aboutController",["$scope","$timeout","greenBar",o])}();

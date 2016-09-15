@@ -27,6 +27,8 @@
           greenBar.helloWorld();
           $timeout(function(){
             vm.mydata = res.data;
+            greenBar.goodbyeWorld();
+            console.log('from show controller');
           }, 500);
 
         });

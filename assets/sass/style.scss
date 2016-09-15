@@ -109,10 +109,20 @@ ng-md-icon:focus {
 
 div.green.slide-out{
   // width: 100%;
-  -webkit-animation: .6s ease-out 0s 2 alternate slide-out;
-     -moz-animation: .6s ease-out 0s 2 alternate slide-out;
-       -o-animation: .6s ease-out 0s 2 alternate slide-out;
-          animation: .6s ease-out 0s 2 alternate slide-out;
+  -webkit-animation: .6s ease-out 0s 1 forwards slide-out;
+     -moz-animation: .6s ease-out 0s 1 forwards slide-out;
+       -o-animation: .6s ease-out 0s 1 forwards slide-out;
+          animation: .6s ease-out 0s 1 forwards slide-out;
+}
+div.green.slide-in{
+  // width: 100%;
+  -webkit-animation: .6s ease-in 0s 1 slide-in;
+     -moz-animation: .6s ease-in 0s 1 slide-in;
+       -o-animation: .6s ease-in 0s 1 slide-in;
+          animation: .6s ease-in 0s 1 slide-in;
+}
+.md-button.md-raised{
+  background-color: $textColor !important;
 }
 
 @keyframes slide-out {
@@ -121,6 +131,14 @@ div.green.slide-out{
   }
   to {
     width: 100%;
+  }
+}
+@keyframes slide-in {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 1em;
   }
 }
 // MENU //////////////////////////////////////////////
@@ -258,6 +276,12 @@ nav.fixie {
 }
 [ui-view].ng-enter {
     animation: fadeIn 1s;
+}
+[ui-view].green.ng-enter{
+  -webkit-animation: .6s ease-out 0s 1 forwards slide-out;
+     -moz-animation: .6s ease-out 0s 1 forwards slide-out;
+       -o-animation: .6s ease-out 0s 1 forwards slide-out;
+          animation: .6s ease-out 0s 1 forwards slide-out;
 }
 [ui-view].ng-leave-active {
     animation: fadeOut 1s;

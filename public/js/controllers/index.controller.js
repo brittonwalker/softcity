@@ -4,24 +4,29 @@
     angular
       .module("softCity")
       .controller("indexController", [
+        '$rootScope',
         '$scope',
         '$http',
         '$stateParams',
         'auth',
         'greenBar',
         '$timeout',
+        'ProjectService',
         IndexControllerFunction
       ]);
 
-    function IndexControllerFunction($scope, $http, $stateParams, auth, greenBar, $timeout) {
+    function IndexControllerFunction($rootScope, $scope, $http, $stateParams, auth, greenBar, $timeout, ProjectService) {
 
+      // ProjectService.getProjects();
       var getProjects = function() {
         $http.get('https://soft-city.herokuapp.com/api/projects')
         .then(function(res) {
           greenBar.helloWorld();
           $timeout(function(){
             vm.mydata = res.data;
-          }, 500);
+            greenBar.goodbyeWorld();
+            console.log('from index controller');
+          }, 1000);
         })
       }
 
