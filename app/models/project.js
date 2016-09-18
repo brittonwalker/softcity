@@ -8,6 +8,7 @@ var ProjectSchema   = new Schema({
     specs: String,
     price: Number,
     link: String,
+    number: Number,
     img: []
 });
 

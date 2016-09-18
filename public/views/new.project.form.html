@@ -26,6 +26,10 @@
     <label>Link</label>
     <input ng-model="formData.link" type="text">
   </md-input-container>
+  <md-input-container class="md-icon-float md-block">
+    <label>Number</label>
+    <input ng-model="formData.number" type="number">
+  </md-input-container>
   <md-input-container class="md-icon-float md-block" ng-repeat="img in formData.img track by $index">
     <label>Image Url</label>
     <input ng-model="formData.img[$index]" type="text">

@@ -28,6 +28,7 @@ module.exports = function(app) {
       specs: req.body.specs,
       price: req.body.price,
       link: req.body.link,
+      number: req.body.number,
       img: array.concat(images)
     }, function(err, project) {
       if (err)
@@ -63,7 +64,8 @@ module.exports = function(app) {
       project.specs = req.body.specs;
       project.price = req.body.price;
       project.link = req.body.link;
-      project.img = array.concat(images)
+      project.number = req.body.number;
+      project.img = array.concat(images);
 
       project.save(function(err) {
         if (err)
@@ -92,8 +94,10 @@ module.exports = function(app) {
         res.send(err);
 
       Project.find(function(err, projects) {
-        if (err)
-          res.send(err)
+        if (err){
+          res.send(err);
+        }
+
         res.json(projects);
       });
     });
