@@ -223,6 +223,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/public\/js\/controllers\/min\/intro.controller-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/js\/controllers\/min\/intro.controller-min.js",
+		"outputAbbreviatedPath": "\/public\/js\/controllers\/min\/min\/intro.controller-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/public\/js\/controllers\/min\/nav.controller-min.js": {
 		"fileType": 64,
 		"ignore": 1,

@@ -112,10 +112,13 @@ div.green.slide-in {
   animation: .6s ease-in 0s 1 slide-in; }
 
 .md-button.md-raised {
-  background-color: #56217c !important; }
+  background-color: #56217c !important;
+  padding: 5px 10px; }
 
 button {
-  box-shadow: none !important; }
+  box-shadow: none !important;
+  padding: 5px 10px;
+  font-family: 'AvenirLTStd-Black'; }
 
 @keyframes slide-out {
   from {
@@ -320,7 +323,7 @@ button {
   font-family: Fortescue-Bold;
   font-size: 28px;
   text-transform: capitalize;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   line-height: 30px;
   max-width: 550px;
   margin: 0; }
@@ -333,9 +336,9 @@ button {
   margin: 0; }
 
 .details {
-  font-size: 16px;
-  line-height: 28px;
-  margin: 15px 0; }
+  font-size: 28px;
+  line-height: 39px;
+  margin: 20px 0; }
 
 .index-img {
   width: 100%; }
@@ -364,7 +367,8 @@ button {
   transform: translateY(-50%);
   width: 60%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-size: 52px; }
 
 .splash img.squiggle {
   position: absolute;
