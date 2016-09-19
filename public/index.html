@@ -15,10 +15,10 @@
     <nav ng-controller="navController" data-sticky-nav>
             <div class="nav-container">
             <div class="navbar">
-              <img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png">
-                <!-- <a ui-sref="home"><img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png"></a> -->
+              <!-- <img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png"> -->
+                <a ui-sref="intro"><img alt="Soft City Logo" id="logo" src="./img/softcitylogo.png"></a>
             </div>
-            <ul ng-hide="$state.includes('intro', 'nada')">
+            <ul>
                 <!-- <li class="menu"><a ui-sref="intro" class="links" ui-sref-active="active">intro</a></li> -->
                 <li class="menu">
                     <a class="links" ui-sref-active="active" ui-sref="projects">Projects</a>

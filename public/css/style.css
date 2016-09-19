@@ -94,6 +94,7 @@ ng-md-icon:focus {
   left: 0;
   height: 100%;
   width: 1em;
+  z-index: 300;
   background-color: #30f7ba; }
   @media (max-width: 480px) {
     .green {
@@ -146,6 +147,7 @@ nav:focus {
   width: 100%;
   height: 130px;
   position: fixed;
+  z-index: 200;
   background-color: transparent;
   justify-content: space-between;
   -webkit-transition: height 300ms ease-in-out;
@@ -283,6 +285,9 @@ button {
         line-height: 1.5em; } }
   .description p:nth-child(3) {
     font-family: AvenirLTStd-Black; }
+  .description .title {
+    font-size: 52px;
+    word-spacing: 10px; }
 
 .image-container {
   width: 50%;
