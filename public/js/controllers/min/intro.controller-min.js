@@ -1,1 +1,1 @@
-"use strict";!function(){function t(t,o){t(function(){o.path("/projects")},5e3)}angular.module("softCity").controller("introController",["$timeout","$location",t])}();
+"use strict";!function(){function o(o,t){}angular.module("softCity").controller("introController",["$timeout","$location",o])}();

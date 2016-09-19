@@ -15,10 +15,10 @@
       // console.log(el);
       // console.log('hey mate');
 
-      $timeout(function() {
-             //will be directed to / after 3 seconds.
-             $location.path('/projects');
-          }, 5000);
+      // $timeout(function() {
+      //        //will be directed to / after 3 seconds.
+      //        $location.path('/projects');
+      //     }, 5000);
 
       }
     }());
