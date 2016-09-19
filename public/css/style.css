@@ -113,12 +113,12 @@ div.green.slide-in {
 
 .md-button.md-raised {
   background-color: #56217c !important;
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  font-family: 'AvenirLTStd-Black'; }
 
 button {
   box-shadow: none !important;
-  padding: 5px 10px;
-  font-family: 'AvenirLTStd-Black'; }
+  padding: 5px 10px; }
 
 @keyframes slide-out {
   from {

@@ -124,11 +124,12 @@ div.green.slide-in{
 .md-button.md-raised{
   background-color: $textColor !important;
   padding: 5px 10px;
+  font-family: 'AvenirLTStd-Black';
 }
 button{
   box-shadow: none !important;
   padding: 5px 10px;
-  font-family: 'AvenirLTStd-Black';
+
 }
 
 @keyframes slide-out {
