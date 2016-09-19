@@ -1,5 +1,5 @@
 <div class="indexcontainer">
-  <div ng-repeat="item in index.mydata" class="indexview">
+  <div ng-repeat="item in index.mydata | orderBy:'+number'" class="indexview">
     <h3 class="title"><a data-ui-sref="projectShow({id: item._id})">{{ item.title }}</a></h3>
     <p class="author medium-text">By {{ item.author }}</p>
     <div class="index-img">

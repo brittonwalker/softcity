@@ -4,7 +4,6 @@
         <h2 class="details">{{ show.mydata.about }}</h2>
         <p class="author">{{ show.mydata.author }}</p>
         <p class="details">{{ show.mydata.specs }}</p>
-        <p class="details">{{ show.mydata.number }}</p>
         <a href="{{ show.mydata.link }}" target="_blank"><md-button class="md-raised md-primary">${{ show.mydata.price }}</md-button></a>
     </div>
 
@@ -12,6 +11,10 @@
     <form name="update-project-form" ng-submit="updateProject()" novalidate ng-show="auth.profile">
         <h1>Update Project</h1>
 
+        <md-input-container class="md-icon-float md-block">
+            <label>Number</label>
+            <input ng-model="show.mydata.number" type="number">
+        </md-input-container>
         <md-input-container class="md-icon-float md-block">
             <label>Project Name</label>
             <input ng-model="show.mydata.title" type="text">
@@ -31,10 +34,6 @@
         <md-input-container class="md-icon-float md-block">
             <label>Price</label>
             <input ng-model="show.mydata.price" type="text">
-        </md-input-container>
-        <md-input-container class="md-icon-float md-block">
-            <label>Number</label>
-            <input ng-model="show.mydata.number" type="number">
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
             <label>Link to buy</label>
