@@ -124,6 +124,9 @@ div.green.slide-in{
 .md-button.md-raised{
   background-color: $textColor !important;
 }
+button{
+  box-shadow: none !important;
+}
 
 @keyframes slide-out {
   from {
