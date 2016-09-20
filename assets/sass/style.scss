@@ -125,7 +125,9 @@ div.green.slide-in{
 .md-button.md-raised{
   background-color: $textColor !important;
   padding: 5px 10px;
-  font-family: 'AvenirLTStd-Black';
+  font-family: AvenirLTStd-Black !important;
+  letter-spacing: 0.2em;
+  font-size: 14px !important;
 }
 button{
   box-shadow: none !important;
@@ -348,6 +350,7 @@ button {
     .title{
       font-size: 52px;
       word-spacing: 10px;
+      line-height: 64px;
     }
 }
 .image-container {
@@ -459,27 +462,25 @@ button {
     }
 }
 // SPLASH INTRO //////////////////////////////////////
+.splash-container{
+  width: 100%;
+  max-width: 1200px;
+  // position: relative;
+  // height: 100vh;
+  // margin-top: 130px;
+}
 .splash {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 400px;
+    // height: calc(100vh - 250px);
     z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    // background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 2px, transparent 2px, transparent 100%);
-    // background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    // background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    // background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    // -webkit-background-size: 3px 3px;
-    // -moz-background-size: 3px 3px;
-    // background-size: 40px 40px;
+    // background-color: black;
+    position: relative;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 }
 .splash h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     width: 60%;
     margin: 0 auto;
     text-align: center;
@@ -487,6 +488,10 @@ button {
     line-height: 64px;
     padding: 38px;
     letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .splash img.squiggle {
     position: absolute;
@@ -496,6 +501,7 @@ button {
     transform: translateY(-50%);
     width: 50%;
     margin: 0 auto;
+    z-index: -100;
 }
 // ABOUT PAGE ////////////////////////////////////////////////
 .circle {

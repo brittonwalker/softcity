@@ -115,7 +115,9 @@ div.green.slide-in {
 .md-button.md-raised {
   background-color: #56217c !important;
   padding: 5px 10px;
-  font-family: 'AvenirLTStd-Black'; }
+  font-family: AvenirLTStd-Black !important;
+  letter-spacing: 0.2em;
+  font-size: 14px !important; }
 
 button {
   box-shadow: none !important;
@@ -287,7 +289,8 @@ button {
     font-family: AvenirLTStd-Black; }
   .description .title {
     font-size: 52px;
-    word-spacing: 10px; }
+    word-spacing: 10px;
+    line-height: 64px; }
 
 .image-container {
   width: 50%;
@@ -356,27 +359,28 @@ button {
       width: 100%;
       height: auto; } }
 
+.splash-container {
+  width: 100%;
+  max-width: 1200px; }
+
 .splash {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 400px;
   z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 0; }
+  position: relative; }
 
 .splash h1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   width: 60%;
   margin: 0 auto;
   text-align: center;
   font-size: 52px;
   line-height: 64px;
   padding: 38px;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 .splash img.squiggle {
   position: absolute;
@@ -385,7 +389,8 @@ button {
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: -100; }
 
 .circle, .circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6, .circle-7, .circle-8, .circle-9, .circle-10 {
   border-radius: 50%;
