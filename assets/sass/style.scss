@@ -123,16 +123,18 @@ div.green.slide-in{
           animation: .6s ease-in 0s 1 slide-in;
 }
 .md-button.md-raised{
-  background-color: $textColor !important;
-  padding: 10px;
-  font-family: AvenirLTStd-Black !important;
-  letter-spacing: 0.2em;
-  font-size: 14px !important;
-}
-button{
-  box-shadow: none !important;
-  padding: 5px 10px;
 
+}
+.view-in-store{
+  background-color: $textColor;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-family: AvenirLTStd-Black;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
 }
 
 @keyframes slide-out {
